@@ -1,15 +1,16 @@
 // Components
 import Logo from "../Logo";
-import { ShoppingCart, MapPin } from 'phosphor-react'
+import MapPin from "../MapPin";
+import ShoppingCart from "../ShoppingCart";
 
 // Styles
-import { HeaderContainer, HeaderLocationBox, HeaderRightBox, HeaderShoppingBox } from "./styles";
+import { HeaderContainer, HeaderLocationBox, HeaderNavBox, HeaderShoppingBox } from "./styles";
 
 export default function Header() {
   return (
     <HeaderContainer>
       <Logo />
-      <HeaderRightBox>
+      <HeaderNavBox>
         <HeaderLocationBox>
           <MapPin />
           <span>Porto Alegre, RS</span>
@@ -17,7 +18,7 @@ export default function Header() {
         <HeaderShoppingBox>
           <ShoppingCart />
         </HeaderShoppingBox>
-      </HeaderRightBox>
+      </HeaderNavBox>
     </HeaderContainer>
 
   )
