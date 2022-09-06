@@ -6,6 +6,7 @@ height: 6.5rem;
 display: flex;
 justify-content: space-around;
 align-items: center;
+gap: 30rem;
 `
 
 export const HeaderNavBox = styled.div`
