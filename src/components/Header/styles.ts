@@ -8,7 +8,7 @@ justify-content: space-around;
 align-items: center;
 `
 
-export const HeaderNavBox =  styled.div`
+export const HeaderNavBox = styled.div`
 width: 12.5rem;
 display: flex;
 flex-direction: row;
@@ -33,7 +33,7 @@ font-weight: 400;
 color: ${(props) => props.theme['purple-dark']};
 background-color: ${(props) => props.theme['purple-light']};
 `
-export const HeaderShoppingBox =  styled(BaseBox)`
+export const HeaderShoppingBox = styled(BaseBox)`
 width: 2.375rem;
 height: 2.375rem;
 padding: 0.5rem;
