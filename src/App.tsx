@@ -1,7 +1,12 @@
+// Components
+import Header from "./components/Header"
 
 function App() {
   return (
-   <div>Coffee Delivery</div>
+   <div>
+      <Header />
+
+    </div>
   )
 }
 
