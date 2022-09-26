@@ -1,6 +1,4 @@
-import React from "react";
-
-function ShoppingCart() {
+export function ShoppingCart() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,5 +14,3 @@ function ShoppingCart() {
     </svg>
   );
 }
-
-export default ShoppingCart;
