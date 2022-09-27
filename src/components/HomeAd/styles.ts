@@ -4,7 +4,7 @@ export const Banner = styled.section`
 width: 66rem;
 height: 34rem;
 margin: 0 auto;
-margin-top: 3.75rem;
+margin-top: 10rem;
 display: flex;
 justify-content: space-between;
 align-items: flex-start;

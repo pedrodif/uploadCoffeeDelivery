@@ -2,6 +2,7 @@ export const defaultTheme = {
   // White pallete
   'white-simple': '#FFF',
   'white-base': '#FAFAFA',
+  'card-base': '#F3F2F2',
 
   // Purple palette
   'purple-light': '#EBE5F9',

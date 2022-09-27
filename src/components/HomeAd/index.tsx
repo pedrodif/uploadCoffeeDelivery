@@ -20,41 +20,40 @@ import {
 
 export function HomeAd() {
   return (
-      <Banner>
-        <BannerTextWrapper>
-          <BannerHeader>
-            <HeaderTitle>Encontre o café perfeito para qualquer hora do dia</HeaderTitle>
-            <HeaderSubtitle>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</HeaderSubtitle>
-          </BannerHeader>
+    <Banner>
+      <BannerTextWrapper>
+        <BannerHeader>
+          <HeaderTitle>Encontre o café perfeito para qualquer hora do dia</HeaderTitle>
+          <HeaderSubtitle>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</HeaderSubtitle>
+        </BannerHeader>
 
-          <BannerBody>
-            <div>
-              <BannerBodyBox>
-                <ShoppingCartGroup />
-                <p>Compra simples e segura</p>
-              </BannerBodyBox>
+        <BannerBody>
+          <div>
+            <BannerBodyBox>
+              <ShoppingCartGroup />
+              <p>Compra simples e segura</p>
+            </BannerBodyBox>
 
-              <BannerBodyBox>
-                <TimerGroup />
-                <p>Entrega rápida e rastreada</p>
-              </BannerBodyBox>
-            </div>
+            <BannerBodyBox>
+              <TimerGroup />
+              <p>Entrega rápida e rastreada</p>
+            </BannerBodyBox>
+          </div>
 
-            <div>
-              <BannerBodyBox>
-                <PackageGroup />
-                <p>Embalagem mantém o café intacto</p>
-              </BannerBodyBox>
+          <div>
+            <BannerBodyBox>
+              <PackageGroup />
+              <p>Embalagem mantém o café intacto</p>
+            </BannerBodyBox>
 
-              <BannerBodyBox>
-                <CoffeeGroup />
-                <p>O café chega fresquinho até você</p>
-              </BannerBodyBox>
-            </div>
-          </BannerBody>
-        </BannerTextWrapper>
-        <img src={coffeeBannerImg} alt="Coffee Image" />
-      </Banner>
+            <BannerBodyBox>
+              <CoffeeGroup />
+              <p>O café chega fresquinho até você</p>
+            </BannerBodyBox>
+          </div>
+        </BannerBody>
+      </BannerTextWrapper>
+      <img src={coffeeBannerImg} alt="Coffee Drawing" />
+    </Banner>
   )
-
 }
