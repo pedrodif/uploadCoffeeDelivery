@@ -27,7 +27,7 @@ line-height: 130%;
 border: none;
 `
 
-export const HeaderLocationBox = styled(BaseButton)`
+export const HeaderLocationButton = styled(BaseButton)`
 width: 9.563rem;
 height: 2.375rem;
 gap: 0.25rem;
@@ -37,7 +37,7 @@ color: ${(props) => props.theme['purple-dark']};
 background-color: ${(props) => props.theme['purple-light']};
 `
 
-export const HeaderShoppingBox = styled(BaseButton)`
+export const HeaderShoppingButton = styled(BaseButton)`
 width: 2.375rem;
 height: 2.375rem;
 padding: 0.5rem;

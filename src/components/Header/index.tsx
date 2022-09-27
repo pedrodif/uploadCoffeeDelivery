@@ -7,9 +7,9 @@ import { Logo } from "../Logo";
 // Styles
 import {
   HeaderContainer,
-  HeaderLocationBox,
   HeaderNavBox,
-  HeaderShoppingBox
+  HeaderLocationButton,
+  HeaderShoppingButton
 } from "./styles";
 
 export default function Header() {
@@ -17,18 +17,18 @@ export default function Header() {
     <HeaderContainer>
       <Logo />
       <HeaderNavBox>
-        <HeaderLocationBox
+        <HeaderLocationButton
           type="button"
         >
           <MapPin color="#8047F8" weight="fill" size={23} />
           Porto Alegre, RS
-        </HeaderLocationBox>
+        </HeaderLocationButton>
 
-        <HeaderShoppingBox
+        <HeaderShoppingButton
           type="button"
         >
           <ShoppingCart color="#C47F17" weight="fill" size={23}/>
-        </HeaderShoppingBox>
+        </HeaderShoppingButton>
       </HeaderNavBox>
     </HeaderContainer>
 
