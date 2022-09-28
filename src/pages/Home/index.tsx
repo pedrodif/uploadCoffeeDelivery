@@ -2,13 +2,10 @@
 
 // Components
 import { HomeAd } from "../../components/HomeAd";
-import { BaseCoffeeCard } from "../../components/BaseCoffeeCard";
-
-// Assets
-import tradicionalCoffee from "../../assets/traditionalCoffee.svg"
+import { CoffeeCard } from "../../components/CoffeeCard";
 
 //styles
-import { CoffeesContainer, CoffeesContainerTitle } from "./styles";
+import { MenuContainer, MenuTitle } from "./styles";
 
 
 export function Home() {
@@ -16,10 +13,12 @@ export function Home() {
   return (
     <>
       <HomeAd />
-      <CoffeesContainer>
-        <CoffeesContainerTitle>Nossos cafés</CoffeesContainerTitle>
-        <BaseCoffeeCard />
-      </CoffeesContainer>
+      <MenuContainer>
+        <MenuTitle>
+          Nossos cafés
+        </MenuTitle>
+        <CoffeeCard />
+      </MenuContainer>
     </>
   )
 }

@@ -19,7 +19,7 @@ import {
   CardAmountWrapper
 } from "./styles"
 
-export function BaseCoffeeCard() {
+export function CoffeeCard() {
   return (
     <CardContainer>
       <CardImageWrapper>
