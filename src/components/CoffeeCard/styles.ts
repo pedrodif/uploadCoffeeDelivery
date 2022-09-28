@@ -18,6 +18,7 @@ z-index: 0;
 // provisional solution
 margin-top: 50px;
 margin-bottom: 20px;
+box-shadow: 0px 0px 0px 0.5px rgba(0, 0, 0, 0.4);
 `
 
 export const CardImageWrapper = styled.div`
