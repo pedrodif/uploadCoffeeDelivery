@@ -5,49 +5,61 @@ import { Minus, Plus, ShoppingCartSimple } from "phosphor-react"
 import tradicionalCoffee from "../../assets/traditionalCoffee.svg"
 
 // Styles
-import { CoffeesAmountBox, CoffeesBillBox, CoffeesBillValue, CoffeesCard, CoffeesCardImg, CoffeesDescriptionBox, CoffeesIngredients, CoffeesIngredientsBox, CoffeesShoppingBox, CoffeesShoppingButton, CoffeesTitle } from "./styles"
+import {
+  CardBillWrapper,
+  CardBillValue,
+  CardContainer,
+  CardImageWrapper,
+  Ingredients,
+  CardIngredientsWrapper,
+  CardShoppingWrapper,
+  CardShopppingButton,
+  CardTitle,
+  CardDescriptionWrapper,
+  CardAmountWrapper
+} from "./styles"
 
 export function BaseCoffeeCard() {
   return (
-    <CoffeesCard>
-      <CoffeesCardImg>
+    <CardContainer>
+      <CardImageWrapper>
         <img src={tradicionalCoffee} alt="Coffee Image" />
-      </CoffeesCardImg>
+      </CardImageWrapper>
 
-      <CoffeesIngredientsBox>
-        <CoffeesIngredients>
+      <CardIngredientsWrapper>
+        <Ingredients>
           TRADICIONAL
-        </CoffeesIngredients>
-      </CoffeesIngredientsBox>
+        </Ingredients>
+      </CardIngredientsWrapper>
 
-      <CoffeesTitle>
+      <CardTitle>
         Expresso Tradicional
-      </CoffeesTitle>
+      </CardTitle>
 
-      <CoffeesDescriptionBox>
+      <CardDescriptionWrapper>
         O tradicional café feito com água quente e grãos moídos
-      </CoffeesDescriptionBox>
+      </CardDescriptionWrapper>
 
-      <CoffeesShoppingBox>
-        <CoffeesBillBox>
+      <CardShoppingWrapper>
+        <CardBillWrapper>
           R$
-          <CoffeesBillValue>
+          <CardBillValue>
             9,90
-          </CoffeesBillValue>
-        </CoffeesBillBox>
+          </CardBillValue>
+        </CardBillWrapper>
 
-        <CoffeesAmountBox>
+        <CardAmountWrapper>
           <Minus color="#4B2995" />
           <p>1</p>
           <Plus color="#4B2995" />
-        </CoffeesAmountBox>
+        </CardAmountWrapper>
 
-        <CoffeesShoppingButton
+        <CardShopppingButton
           type="button"
         >
           <ShoppingCartSimple color="#F3F2F2" weight="fill" size={23} />
-        </CoffeesShoppingButton>
-      </CoffeesShoppingBox>
-    </CoffeesCard>
+        </CardShopppingButton>
+      </CardShoppingWrapper>
+    </CardContainer>
   )
 }

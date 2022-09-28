@@ -2,7 +2,7 @@
 // Packages
 import styled from 'styled-components'
 
-export const CoffeesCard = styled.section`
+export const CardContainer = styled.section`
 box-sizing: border-box;
 width: 16rem;
 height: 19.375rem;
@@ -20,23 +20,15 @@ margin-top: 50px;
 margin-bottom: 20px;
 `
 
-export const CoffeesCardImg = styled.div`
+export const CardImageWrapper = styled.div`
 width: 120px;
 height: 120px;
 margin: 0 auto;
 margin-top: -30px;
 z-index: 1;
 `
-export const CoffeesTitle = styled.strong`
-font-family: 'Baloo 2';
-font-size: 20px;
-font-weight: 700;
-line-height: 26px;
-margin-bottom: 10px;
-color: ${(props) => props.theme['base-subtitle']};
-`
 
-export const CoffeesIngredientsBox = styled.div`
+export const CardIngredientsWrapper = styled.div`
 width: 90%;
 height: 100%;
 margin: 0 auto;
@@ -46,7 +38,7 @@ align-items: center;
 gap: 6px;
 `
 
-export const CoffeesIngredients = styled.p`
+export const Ingredients = styled.p`
 display: flex;
 justify-content: center;
 align-items: center;
@@ -59,7 +51,16 @@ color: ${(props) => props.theme['yellow-dark']};
 background-color: ${(props) => props.theme['yellow-light']};
 `
 
-export const CoffeesDescriptionBox = styled.text`
+export const CardTitle = styled.strong`
+font-family: 'Baloo 2';
+font-size: 20px;
+font-weight: 700;
+line-height: 26px;
+margin-bottom: 10px;
+color: ${(props) => props.theme['base-subtitle']};
+`
+
+export const CardDescriptionWrapper = styled.text`
 display: flex;
 justify-content: center;
 align-items: center;
@@ -72,7 +73,7 @@ margin-bottom: 30px;
 color: ${(props) => props.theme['base-label']};
 `
 
-export const CoffeesShoppingBox = styled.div`
+export const CardShoppingWrapper = styled.div`
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -82,7 +83,7 @@ margin: 0 auto;
 margin-bottom: 25px;
 `
 
-export const CoffeesAmountBox = styled.div`
+export const CardAmountWrapper = styled.div`
 display: flex;
 justify-content: space-around;
 align-items: center;
@@ -94,7 +95,7 @@ color: ${(props) => props.theme['base-title']};
 background-color:${(props) => props.theme['base-button']};
 `
 
-export const CoffeesBillBox = styled.p`
+export const CardBillWrapper = styled.p`
 display: flex;
 flex-direction: row;
 align-items: center;
@@ -102,12 +103,12 @@ gap: 2px;
 font-size: 16px;
 color:${(props) => props.theme['base-text']};
 `
-export const CoffeesBillValue = styled.span`
+export const CardBillValue = styled.span`
 font-size: 25px;
 font-family: 'Baloo 2';
 
 `
-export const CoffeesShoppingButton = styled.button`
+export const CardShopppingButton = styled.button`
 width: 38px;
 height: 38px;
 border: none;
