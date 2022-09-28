@@ -22,12 +22,14 @@ font-family: 'Baloo 2';
 font-size: 3rem;
 font-weight: 800;
 line-height: 3.9rem;
+color: ${(props) => props.theme['base-title']};
 `
 export const HeaderSubtitle = styled.p`
 font-size: 1.25rem;
 font-weight: 400;
 line-height: 1.625rem;
 margin-top: 0.938rem;
+color: ${(props) => props.theme['base-subtitle']};
 `
 export const BannerBody = styled.div`
 box-sizing: border-box;
@@ -44,4 +46,5 @@ display: flex;
 align-items: center;
 gap: 0.75rem;
 margin-top: 0.625rem;
+color: ${(props) => props.theme['base-text']};
 `

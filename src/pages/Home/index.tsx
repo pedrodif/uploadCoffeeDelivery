@@ -2,6 +2,7 @@
 
 // Components
 import { HomeAd } from "../../components/HomeAd";
+import { BaseCoffeeCard } from "../../components/BaseCoffeeCard";
 
 // Assets
 import tradicionalCoffee from "../../assets/traditionalCoffee.svg"
@@ -17,10 +18,8 @@ export function Home() {
       <HomeAd />
       <CoffeesContainer>
         <CoffeesContainerTitle>Nossos cafés</CoffeesContainerTitle>
+        <BaseCoffeeCard />
       </CoffeesContainer>
     </>
-
-
-
   )
 }
