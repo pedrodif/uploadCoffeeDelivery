@@ -1,8 +1,8 @@
 // Components
-import { CoffeeGroup } from "../CoffeeGroup";
-import { PackageGroup } from "../PackageGroup";
-import { ShoppingCartGroup } from "../ShoppingCartGroup";
-import { TimerGroup } from "../TimerGroup";
+import { CoffeeGroup } from "../icons/CoffeeGroup";
+import { PackageGroup } from "../icons/PackageGroup";
+import { ShoppingCartGroup } from "../icons/ShoppingCartGroup";
+import { TimerGroup } from "../icons/TimerGroup";
 
 // assets
 import coffeeBannerImg from "../../assets/coffeeBannerImg.png"
