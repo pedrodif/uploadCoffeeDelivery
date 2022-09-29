@@ -1,4 +1,5 @@
 // Packages
+import { useState } from "react"
 import { Minus, Plus, ShoppingCartSimple } from "phosphor-react"
 
 // Assets
@@ -20,6 +21,8 @@ import {
 } from "./styles"
 
 export function CoffeeCard() {
+  const [ingredients, setIngredients] = useState([]);
+
   return (
     <CardContainer>
       <CardImageWrapper>
