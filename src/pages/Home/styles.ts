@@ -5,6 +5,17 @@ export const MenuContainer = styled.section`
   height: 100%;
   margin: 0 auto;
   margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+`
+
+export const CardsLayout = styled.div`
+  display: block;
+  width: 66rem;
+  height: 100%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  box-sizing: border-box;
 `
 
 export const MenuTitle = styled.strong`

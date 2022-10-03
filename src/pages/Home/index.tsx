@@ -1,11 +1,12 @@
-
-
 // Components
 import { HomeAd } from "../../components/HomeAd";
 import { CoffeeCard } from "../../components/CoffeeCard";
 
-//styles
-import { MenuContainer, MenuTitle } from "./styles";
+// Styles
+import { CardsLayout, MenuContainer, MenuTitle } from "./styles";
+
+// Utils
+import { coffeeOptionsList } from "../../utils/options";
 
 
 export function Home() {
@@ -17,7 +18,20 @@ export function Home() {
         <MenuTitle>
           Nossos cafés
         </MenuTitle>
-        <CoffeeCard />
+        <CardsLayout>
+        {coffeeOptionsList.map(coffeeOption => {
+          return(
+            <CoffeeCard
+              key={coffeeOption.id}
+              title={coffeeOption.title}
+              ingredients={coffeeOption.ingredients}
+              description={coffeeOption.description}
+              value={coffeeOption.value}
+              imgSource={coffeeOption.imgSource}
+            />
+          )
+        })}
+        </CardsLayout>
       </MenuContainer>
     </>
   )

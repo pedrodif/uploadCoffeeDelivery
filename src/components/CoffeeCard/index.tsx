@@ -1,9 +1,5 @@
 // Packages
-import { useState } from "react"
-import { Minus, Plus, ShoppingCartSimple } from "phosphor-react"
-
-// Assets
-import tradicionalCoffee from "../../assets/traditionalCoffee.svg"
+import { Minus, Plus, ShoppingCartSimple } from "phosphor-react";
 
 // Styles
 import {
@@ -18,36 +14,43 @@ import {
   CardTitle,
   CardDescriptionWrapper,
   CardAmountWrapper
-} from "./styles"
+} from "./styles";
 
-export function CoffeeCard() {
-  const [ingredients, setIngredients] = useState([]);
+export interface ICoffeeCardProps {
+  id?: string;
+  title: string;
+  ingredients: string;
+  description: string;
+  value: number;
+  imgSource: string;
+}
 
+export function CoffeeCard({ imgSource, ingredients, title, description, value }: ICoffeeCardProps) {
   return (
     <CardContainer>
       <CardImageWrapper>
-        <img src={tradicionalCoffee} alt="Coffee Image" />
+        <img src={imgSource} alt="Coffee illustration image" />
       </CardImageWrapper>
 
       <CardIngredientsWrapper>
         <Ingredients>
-          TRADICIONAL
+          {ingredients}
         </Ingredients>
       </CardIngredientsWrapper>
 
       <CardTitle>
-        Expresso Tradicional
+        {title}
       </CardTitle>
 
       <CardDescriptionWrapper>
-        O tradicional café feito com água quente e grãos moídos
+        {description}
       </CardDescriptionWrapper>
 
       <CardShoppingWrapper>
         <CardBillWrapper>
           R$
           <CardBillValue>
-            9,90
+            {value}
           </CardBillValue>
         </CardBillWrapper>
 
