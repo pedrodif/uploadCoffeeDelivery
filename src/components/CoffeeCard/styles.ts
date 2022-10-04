@@ -15,7 +15,6 @@ border-bottom-left-radius: 2.25rem;
 border-bottom-right-radius: 0.375rem;
 background-color: ${(props) => props.theme['card-base']};
 z-index: 0;
-// provisional solution
 margin-top: 3.125rem;
 margin-bottom: 1.25rem;
 box-shadow: 0px 0px 0px 0.5px rgba(0, 0, 0, 0.4);
@@ -26,7 +25,6 @@ width: 7.5rem;
 height: 7.5rem;
 margin: 0 auto;
 margin-top: -1.875rem;
-z-index: 1;
 `
 
 export const CardIngredientsWrapper = styled.div`

@@ -1,3 +1,4 @@
+import { images } from "../assets";
 
 export const coffeeOptionsList = [
   {
@@ -6,7 +7,7 @@ export const coffeeOptionsList = [
     ingredients: 'TRADICIONAL',
     description: 'O tradicional café feito com água quente e grãos moídos',
     value: 9.90,
-    imgSource: '../assets/traditionalCoffee.svg'
+    imgSource: images.Traditional,
   },
   {
     id: '2',
@@ -14,7 +15,7 @@ export const coffeeOptionsList = [
     ingredients: 'TRADICIONAL',
     description: 'Expresso diluído, menos intenso que o tradicional',
     value: 9.90,
-    imgSource: '../assets/americanCoffee.svg'
+    imgSource: images.American,
   },
   {
     id: '3',
@@ -22,7 +23,7 @@ export const coffeeOptionsList = [
     ingredients: 'TRADICIONAL',
     description: 'Café expresso tradicional com espuma cremosa',
     value: 9.90,
-    imgSource: '../assets/creamCoffee.svg'
+    imgSource: images.Cream,
   },
   {
     id: '4',
@@ -39,7 +40,7 @@ export const coffeeOptionsList = [
     ],
     description: 'Bebida preparada com café expresso e cubos de gelo',
     value: 9.90,
-    imgSource: '../assets/iceCoffee.svg'
+    imgSource: images.Ice
   },
   {
     id: '5',
@@ -47,7 +48,7 @@ export const coffeeOptionsList = [
     ingredients: 'TRADICIONAL',
     description: 'Meio a meio de expresso tradicional com leite vaporizado',
     value: 9.90,
-    imgSource: '../assets/milkCoffee.svg'
+    imgSource: images.Milky,
   },
   {
     id: '6',
@@ -55,7 +56,7 @@ export const coffeeOptionsList = [
     ingredients: 'TRADICIONAL',
     description: 'Uma dose de café expresso com o dobro de leite e espuma cremosa',
     value: 9.90,
-    imgSource: '../assets/latteCoffee.svg'
+    imgSource: images.Latte,
   },
   {
     id: '7',
@@ -63,7 +64,7 @@ export const coffeeOptionsList = [
     ingredients: 'TRADICIONAL',
     description: 'Bebida com canela feita de doses iguais de café, leite e espuma',
     value: 9.90,
-    imgSource: '../assets/capuccino.svg'
+    imgSource: images.Capuccino,
   },
   {
     id: '8',
@@ -71,7 +72,7 @@ export const coffeeOptionsList = [
     ingredients: 'TRADICIONAL',
     description: 'Café expresso misturado com um pouco de leite quente e espuma',
     value: 9.90,
-    imgSource: '../assets/macchiato.svg'
+    imgSource: images.Macchiato,
   },
   {
     id: '9',
@@ -79,7 +80,7 @@ export const coffeeOptionsList = [
     ingredients: 'TRADICIONAL',
     description: 'Café expresso com calda de chocolate, pouco leite e espuma',
     value: 9.90,
-    imgSource: '../assets/mocaccino.svg'
+    imgSource: images.Mocaccino,
   },
   {
     id: '10',
@@ -87,7 +88,7 @@ export const coffeeOptionsList = [
     ingredients: 'TRADICIONAL',
     description: 'Bebida feita com chocolate dissolvido no leite quente e café',
     value: 9.90,
-    imgSource: '../assets/hotChocolate.svg'
+    imgSource: images.HotChocolate,
   },
   {
     id: '11',
@@ -95,7 +96,7 @@ export const coffeeOptionsList = [
     ingredients: 'TRADICIONAL',
     description: 'Drink gelado de café expresso com rum, creme de leite e hortelã',
     value: 9.90,
-    imgSource: '../assets/cubanCoffee.svg'
+    imgSource: images.Cuban,
   },
   {
     id: '12',
@@ -103,7 +104,7 @@ export const coffeeOptionsList = [
     ingredients: 'ESPECIAL',
     description: 'Bebida adocicada preparada com café e leite de coco',
     value: 9.90,
-    imgSource: '../assets/hawaianKonaCoffee.svg'
+    imgSource: images.HawainKona,
   },
   {
     id: '13',
@@ -111,7 +112,7 @@ export const coffeeOptionsList = [
     ingredients: 'ESPECIAL',
     description: 'Bebida preparada com grãos de café árabe e especiarias',
     value: 9.90,
-    imgSource: '../assets/arabicCoffee.svg'
+    imgSource: images.Arabic,
   },
   {
     id: '14',
@@ -119,6 +120,6 @@ export const coffeeOptionsList = [
     ingredients: 'ESPECIAL',
     description: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',
     value: 9.90,
-    imgSource: '../assets/irishCoffee.svg'
+    imgSource: images.Irish,
   },
 ]

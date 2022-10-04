@@ -42,19 +42,27 @@ function IngridientsRenderBase({ value }: IIngridientsBaseComponent) {
 }
 
 export function CoffeeCard({ imgSource, ingredients, title, description, value }: ICoffeeCardProps) {
-  const [ingredientsArray, setIngredientsArray] = useState<IIngredients[]>([])
 
-  const verifyIngridientsArray = useCallback(() =>  {
-   if (ingredients.length > 1) {
-    setIngredientsArray(ingredients as IIngredients[])
-    return true;
-   }
-   return false;
-  }, []);
+  const handleMap = (ingredients: IIngredients[]) =>
+	ingredients?.map((ingredient) => {
+    return (
+      <IngridientsRenderBase
+        key={ingredient.id}
+        value={ingredient.value as unknown as string}
+      />
+    )
+  });
 
-  useEffect(() => {
-    verifyIngridientsArray();
-  }, [])
+  const handleIngredients = (ingredients: ICoffeeCardProps["ingredients"]) =>  {
+   if (Object.values(ingredients as unknown as Record<string, unknown>[]).length > 0) {
+      return handleMap(Object.values(ingredients));
+    }
+   return(
+    <IngridientsRenderBase
+      value={ingredients as string}
+    />
+   );
+  }
 
   return (
     <CardContainer>
@@ -62,19 +70,8 @@ export function CoffeeCard({ imgSource, ingredients, title, description, value }
         <img src={imgSource} alt="Coffee illustration image" />
       </CardImageWrapper>
 
-      {/* demarcação  */}
       <CardIngredientsWrapper>
-        {ingredientsArray.length > 0 ?
-        ingredientsArray?.map(ingredient => {
-          return(
-            <IngridientsRenderBase
-              key={ingredient.id}
-              value={ingredient.value}
-            />
-          )
-        }) :
-          <IngridientsRenderBase value={ingredients as string} />
-        }
+        {handleIngredients(ingredients)}
       </CardIngredientsWrapper>
 
       <CardTitle>
