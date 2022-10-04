@@ -27,7 +27,16 @@ export const coffeeOptionsList = [
   {
     id: '4',
     title: 'Expresso Gelado',
-    ingredients: 'TRADICIONAL',
+    ingredients: [
+      {
+        id: '1',
+        value: 'TRADICIONAL'
+      },
+      {
+        id: '2',
+        value: 'GELADO'
+      },
+    ],
     description: 'Bebida preparada com café expresso e cubos de gelo',
     value: 9.90,
     imgSource: '../assets/iceCoffee.svg'

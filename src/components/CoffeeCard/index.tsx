@@ -1,5 +1,6 @@
 // Packages
 import { Minus, Plus, ShoppingCartSimple } from "phosphor-react";
+import { useCallback, useEffect, useState } from "react";
 
 // Styles
 import {
@@ -19,23 +20,61 @@ import {
 export interface ICoffeeCardProps {
   id?: string;
   title: string;
-  ingredients: string;
+  ingredients: string | IIngredients[];
   description: string;
   value: number;
   imgSource: string;
 }
+interface IIngredients {
+  id: 'string';
+  value: string;
+}
+interface IIngridientsBaseComponent {
+  value: string;
+}
+
+function IngridientsRenderBase({ value }: IIngridientsBaseComponent) {
+  return(
+    <Ingredients>
+      {value}
+    </Ingredients>
+  )
+}
 
 export function CoffeeCard({ imgSource, ingredients, title, description, value }: ICoffeeCardProps) {
+  const [ingredientsArray, setIngredientsArray] = useState<IIngredients[]>([])
+
+  const verifyIngridientsArray = useCallback(() =>  {
+   if (ingredients.length > 1) {
+    setIngredientsArray(ingredients as IIngredients[])
+    return true;
+   }
+   return false;
+  }, []);
+
+  useEffect(() => {
+    verifyIngridientsArray();
+  }, [])
+
   return (
     <CardContainer>
       <CardImageWrapper>
         <img src={imgSource} alt="Coffee illustration image" />
       </CardImageWrapper>
 
+      {/* demarcação  */}
       <CardIngredientsWrapper>
-        <Ingredients>
-          {ingredients}
-        </Ingredients>
+        {ingredientsArray.length > 0 ?
+        ingredientsArray?.map(ingredient => {
+          return(
+            <IngridientsRenderBase
+              key={ingredient.id}
+              value={ingredient.value}
+            />
+          )
+        }) :
+          <IngridientsRenderBase value={ingredients as string} />
+        }
       </CardIngredientsWrapper>
 
       <CardTitle>
