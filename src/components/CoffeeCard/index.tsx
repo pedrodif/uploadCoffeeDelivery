@@ -26,7 +26,7 @@ export interface ICoffeeCardProps {
   imgSource: string;
 }
 interface IIngredients {
-  id: 'string';
+  id: string;
   value: string;
 }
 interface IIngridientsBaseComponent {
