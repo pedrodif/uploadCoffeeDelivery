@@ -11,9 +11,9 @@ export const CardsLayout = styled.div`
   width: 66rem;
   height: 355rem;
   /* align-items: center; */
-  justify-content: space-between;
+  /* justify-content: space-between; */
   margin-bottom: 6rem;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   border: 3px solid black;
 `
 
