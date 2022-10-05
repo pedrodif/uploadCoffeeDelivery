@@ -45,7 +45,16 @@ export const coffeeOptionsList = [
   {
     id: '5',
     title: 'Café com Leite',
-    ingredients: 'TRADICIONAL',
+    ingredients: [
+      {
+        id: '1',
+        value: 'TRADICIONAL'
+      },
+      {
+        id: '2',
+        value: 'COM LEITE'
+      },
+    ],
     description: 'Meio a meio de expresso tradicional com leite vaporizado',
     value: 9.90,
     imgSource: images.Milky,
@@ -53,7 +62,16 @@ export const coffeeOptionsList = [
   {
     id: '6',
     title: 'Latte',
-    ingredients: 'TRADICIONAL',
+    ingredients: [
+      {
+        id: '1',
+        value: 'TRADICIONAL'
+      },
+      {
+        id: '2',
+        value: 'COM LEITE'
+      },
+    ],
     description: 'Uma dose de café expresso com o dobro de leite e espuma cremosa',
     value: 9.90,
     imgSource: images.Latte,
@@ -61,7 +79,16 @@ export const coffeeOptionsList = [
   {
     id: '7',
     title: 'Capuccino',
-    ingredients: 'TRADICIONAL',
+    ingredients: [
+      {
+        id: '1',
+        value: 'TRADICIONAL'
+      },
+      {
+        id: '2',
+        value: 'COM LEITE'
+      },
+    ],
     description: 'Bebida com canela feita de doses iguais de café, leite e espuma',
     value: 9.90,
     imgSource: images.Capuccino,
@@ -69,7 +96,16 @@ export const coffeeOptionsList = [
   {
     id: '8',
     title: 'Macchiato',
-    ingredients: 'TRADICIONAL',
+    ingredients: [
+      {
+        id: '1',
+        value: 'TRADICIONAL'
+      },
+      {
+        id: '2',
+        value: 'COM LEITE'
+      },
+    ],
     description: 'Café expresso misturado com um pouco de leite quente e espuma',
     value: 9.90,
     imgSource: images.Macchiato,
@@ -77,7 +113,16 @@ export const coffeeOptionsList = [
   {
     id: '9',
     title: 'Mocaccino',
-    ingredients: 'TRADICIONAL',
+    ingredients: [
+      {
+        id: '1',
+        value: 'TRADICIONAL'
+      },
+      {
+        id: '2',
+        value: 'COM LEITE'
+      },
+    ],
     description: 'Café expresso com calda de chocolate, pouco leite e espuma',
     value: 9.90,
     imgSource: images.Mocaccino,
@@ -85,7 +130,16 @@ export const coffeeOptionsList = [
   {
     id: '10',
     title: 'Chocolate Quente',
-    ingredients: 'TRADICIONAL',
+    ingredients: [
+      {
+        id: '1',
+        value: 'TRADICIONAL'
+      },
+      {
+        id: '2',
+        value: 'COM LEITE'
+      },
+    ],
     description: 'Bebida feita com chocolate dissolvido no leite quente e café',
     value: 9.90,
     imgSource: images.HotChocolate,
@@ -93,7 +147,20 @@ export const coffeeOptionsList = [
   {
     id: '11',
     title: 'Cubano',
-    ingredients: 'TRADICIONAL',
+    ingredients: [
+      {
+        id: '1',
+        value: 'ESPECIAL'
+      },
+      {
+        id: '2',
+        value: 'ALCOÓLICO'
+      },
+      {
+        id: '3',
+        value: 'GELADO'
+      },
+    ],
     description: 'Drink gelado de café expresso com rum, creme de leite e hortelã',
     value: 9.90,
     imgSource: images.Cuban,
@@ -117,7 +184,16 @@ export const coffeeOptionsList = [
   {
     id: '14',
     title: 'Irlandês',
-    ingredients: 'ESPECIAL',
+    ingredients: [
+      {
+        id: '1',
+        value: 'ESPECIAL'
+      },
+      {
+        id: '2',
+        value: 'ALCOÓLICO'
+      },
+    ],
     description: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',
     value: 9.90,
     imgSource: images.Irish,

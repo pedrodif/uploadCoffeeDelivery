@@ -59,7 +59,7 @@ margin-bottom: 0.625rem;
 color: ${(props) => props.theme['base-subtitle']};
 `
 
-export const CardDescriptionWrapper = styled.text`
+export const CardDescriptionWrapper = styled.article`
 display: flex;
 justify-content: center;
 align-items: center;

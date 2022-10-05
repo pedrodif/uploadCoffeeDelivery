@@ -1,6 +1,5 @@
 // Packages
 import { Minus, Plus, ShoppingCartSimple } from "phosphor-react";
-import { useCallback, useEffect, useState } from "react";
 
 // Styles
 import {
@@ -33,16 +32,19 @@ interface IIngridientsBaseComponent {
   value: string;
 }
 
-function IngridientsRenderBase({ value }: IIngridientsBaseComponent) {
-  return(
-    <Ingredients>
-      {value}
-    </Ingredients>
-  )
-}
 
 export function CoffeeCard({ imgSource, ingredients, title, description, value }: ICoffeeCardProps) {
+  // Components
+  function IngridientsRenderBase({ value }: IIngridientsBaseComponent) {
+    // Render
+    return(
+      <Ingredients>
+        {value}
+      </Ingredients>
+    )
+  }
 
+  // Functions
   const handleMap = (ingredients: IIngredients[]) =>
 	ingredients?.map((ingredient) => {
     return (
@@ -54,16 +56,17 @@ export function CoffeeCard({ imgSource, ingredients, title, description, value }
   });
 
   const handleIngredients = (ingredients: ICoffeeCardProps["ingredients"]) =>  {
-   if (Object.values(ingredients as unknown as Record<string, unknown>[]).length > 0) {
-      return handleMap(Object.values(ingredients));
+   if (typeof ingredients === "string") {
+      return (
+        <IngridientsRenderBase
+        value={ingredients as string}
+        />
+      )
     }
-   return(
-    <IngridientsRenderBase
-      value={ingredients as string}
-    />
-   );
+   return handleMap(Object.values(ingredients));
   }
 
+  // Render
   return (
     <CardContainer>
       <CardImageWrapper>

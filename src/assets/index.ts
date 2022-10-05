@@ -13,8 +13,6 @@ import HawainKona from "./hawaianKonaCoffee.svg";
 import Arabic from "./arabicCoffee.svg";
 import Irish from "./irishCoffee.svg";
 
-
-
 export const images = {
   Traditional,
   American,
