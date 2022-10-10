@@ -7,6 +7,7 @@ width: 16rem;
 height: 19.375rem;
 margin-top: 3.125rem;
 margin-bottom: 1.25rem;
+margin-right: 1.55rem;
 display: flex;
 flex-direction: column;
 text-align: center;
