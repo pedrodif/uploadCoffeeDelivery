@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Banner = styled.section`
-width: 66rem;
+width: 71rem;
 height: 34rem;
 margin: 0 auto;
 margin-top: 10rem;
@@ -33,7 +33,7 @@ color: ${(props) => props.theme['base-subtitle']};
 `
 export const BannerBody = styled.div`
 box-sizing: border-box;
-width: 35.438rem;
+width: 35rem;
 height: 5.25rem;
 margin-top: 2.5rem;
 display: flex;

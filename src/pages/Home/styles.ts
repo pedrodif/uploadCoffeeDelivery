@@ -20,5 +20,4 @@ export const MenuTitle = styled.strong`
   font-size: 2rem;
   font-weight: 800;
   color: ${(props) => props.theme['base-subtitle']};
-  margin-left: 2.5rem;
 `
