@@ -3,9 +3,10 @@
 import styled from 'styled-components'
 
 export const CardContainer = styled.section`
-box-sizing: border-box;
 width: 16rem;
 height: 19.375rem;
+margin-top: 3.125rem;
+margin-bottom: 1.25rem;
 display: flex;
 flex-direction: column;
 text-align: center;
@@ -14,9 +15,7 @@ border-top-right-radius: 2.25rem;
 border-bottom-left-radius: 2.25rem;
 border-bottom-right-radius: 0.375rem;
 background-color: ${(props) => props.theme['card-base']};
-z-index: 0;
-margin-top: 3.125rem;
-margin-bottom: 1.25rem;
+box-sizing: border-box;
 box-shadow: 0px 0px 0px 0.5px rgba(0, 0, 0, 0.4);
 `
 
