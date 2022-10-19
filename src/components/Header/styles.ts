@@ -10,6 +10,7 @@ align-items: center;
 gap: 30rem;
 background-color: ${(props) => props.theme['card-base']};
 top: 0;
+left: 0;
 `
 
 export const HeaderNavBox = styled.div`
