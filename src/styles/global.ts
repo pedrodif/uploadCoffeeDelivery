@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body{
+    min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     background-color: ${(props) => props.theme['white-base']}
   }

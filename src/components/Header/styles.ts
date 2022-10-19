@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
-position: fixed;
+position: sticky;
 width: 100%;
 height: 6.5rem;
 display: flex;
@@ -9,6 +9,7 @@ justify-content: space-around;
 align-items: center;
 gap: 30rem;
 background-color: ${(props) => props.theme['card-base']};
+top: 0;
 `
 
 export const HeaderNavBox = styled.div`
