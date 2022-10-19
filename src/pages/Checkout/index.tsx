@@ -1,11 +1,12 @@
 // Packages
-import { MapPinLine, CurrencyDollar } from "phosphor-react";
+import { MapPinLine, CurrencyDollar, CreditCard, Bank, Money } from "phosphor-react";
 
 // Components
+import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
 
 // Styles
-import { CheckoutContainer, SectionHeader, FormFirstSection, FormTitle, HeaderText, Row } from "./styles";
+import { CheckoutContainer, SectionHeader, FirstSection, FormTitle, HeaderText, Row, PaymentMethodWrapper, SecondSection, FormOrganizerWrapper } from "./styles";
 
 export function Checkout() {
   // Render
@@ -13,90 +14,108 @@ export function Checkout() {
     <CheckoutContainer>
       <form>
         <FormTitle>Complete seu pedido</FormTitle>
-        <FormFirstSection>
-          <SectionHeader>
+        <FormOrganizerWrapper>
+          <FirstSection>
+            <SectionHeader>
 
-            <MapPinLine
-              size={20}
-              color="#C47F17"
-            />
+              <MapPinLine
+                size={20}
+                color="#C47F17"
+              />
 
-            <HeaderText>
-              <span>Endereço de Entrega</span>
-              <p>Informe o endereço onde deseja receber seu pedido</p>
-            </HeaderText>
+              <HeaderText>
+                <span>Endereço de Entrega</span>
+                <p>Informe o endereço onde deseja receber seu pedido</p>
+              </HeaderText>
 
-          </SectionHeader>
+            </SectionHeader>
 
-          <Input
-            type="text"
-            placeholder="CEP"
-            width="12.5rem"
-          />
-
-          <Input
-            type="text"
-            placeholder="Rua"
-            width="35rem"
-          />
-
-          <Row>
             <Input
               type="text"
-              placeholder="Número"
+              placeholder="CEP"
               width="12.5rem"
             />
 
             <Input
               type="text"
-              placeholder="Complemento"
-              width="21.75rem"
-           />
-          </Row>
-
-          <Row>
-            <Input
-              type="text"
-              placeholder="Bairro"
-              width="12.5rem"
+              placeholder="Rua"
+              width="35rem"
             />
 
-            <Input
-              type="text"
-              placeholder="Cidade"
-              width="17.25rem"
-           />
+            <Row>
+              <Input
+                type="text"
+                placeholder="Número"
+                width="12.5rem"
+              />
 
-            <Input
-              type="text"
-              placeholder="UF"
-              width="3.75rem"
-           />
-          </Row>
-        </FormFirstSection>
+              <Input
+                type="text"
+                placeholder="Complemento"
+                width="21.75rem"
+            />
+            </Row>
 
-        <section>
-          <SectionHeader>
+            <Row>
+              <Input
+                type="text"
+                placeholder="Bairro"
+                width="12.5rem"
+              />
 
-            <CurrencyDollar
-              size={20}
-              color="#8047F8"
+              <Input
+                type="text"
+                placeholder="Cidade"
+                width="17.25rem"
             />
 
-            <HeaderText>
-              <span>Pagamento</span>
-              <p>O pagamento é feito na entrega. Escolha a forma que deseja pagar</p>
-            </HeaderText>
+              <Input
+                type="text"
+                placeholder="UF"
+                width="3.75rem"
+            />
+            </Row>
+          </FirstSection>
 
-          </SectionHeader>
+          <SecondSection>
+            <SectionHeader>
 
-          <div>
-            <button type="button">Teste</button>
-          </div>
+              <CurrencyDollar
+                size={20}
+                color="#8047F8"
+              />
 
-        </section>
+              <HeaderText>
+                <span>Pagamento</span>
+                <p>O pagamento é feito na entrega. Escolha a forma que deseja pagar</p>
+              </HeaderText>
 
+            </SectionHeader>
 
+            <PaymentMethodWrapper>
+              <Button
+                type="button"
+              >
+                <CreditCard color="#8047F8" size={18}/>
+                CARTÃO DE CRÉDITO
+              </Button>
+
+              <Button
+                type="button"
+              >
+                <Bank color="#8047F8" size={18}/>
+                CARTÃO DE DÉBITO
+              </Button>
+
+              <Button
+                type="button"
+              >
+                <Money color="#8047F8" size={18}/>
+                DINHEIRO
+              </Button>
+            </PaymentMethodWrapper>
+          </SecondSection>
+        </FormOrganizerWrapper>
       </form>
     </CheckoutContainer>
   )
