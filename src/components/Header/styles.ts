@@ -9,7 +9,6 @@ justify-content: space-around;
 align-items: center;
 gap: 30rem;
 background-color: ${(props) => props.theme['card-base']};
-
 `
 
 export const HeaderNavBox = styled.div`

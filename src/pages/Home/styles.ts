@@ -4,7 +4,8 @@ export const MenuContainer = styled.section`
   width: 71rem;
   height: 100%;
   margin: 0 auto;
-  margin-top: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 7rem;
 `
 
 export const CardsLayout = styled.div`

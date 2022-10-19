@@ -36,7 +36,6 @@ interface IIngridientsBaseComponent {
 export function CoffeeCard({ imgSource, ingredients, title, description, value }: ICoffeeCardProps) {
   // Components
   function IngridientsRenderBase({ value }: IIngridientsBaseComponent) {
-    // Render
     return(
       <Ingredients>
         {value}
@@ -59,7 +58,7 @@ export function CoffeeCard({ imgSource, ingredients, title, description, value }
    if (typeof ingredients === "string") {
       return (
         <IngridientsRenderBase
-        value={ingredients as string}
+          value={ingredients as string}
         />
       )
     }

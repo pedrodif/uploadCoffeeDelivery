@@ -12,7 +12,7 @@ import {
   HeaderShoppingButton
 } from "./styles";
 
-export default function Header() {
+export function Header() {
   return (
     <HeaderContainer>
       <Logo />

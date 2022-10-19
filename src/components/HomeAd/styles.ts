@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Banner = styled.section`
 width: 71rem;
-height: 34rem;
+height: 23rem;
 margin: 0 auto;
 margin-top: 10rem;
 display: flex;

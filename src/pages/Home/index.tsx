@@ -10,7 +10,7 @@ import { coffeeOptionsList } from "../../utils/options";
 
 
 export function Home() {
-  // render
+  // Render
   return (
     <>
       <HomeAd />
