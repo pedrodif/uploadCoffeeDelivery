@@ -6,7 +6,7 @@ import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
 
 // Styles
-import { CheckoutContainer, SectionHeader, FirstSection, FormTitle, HeaderText, Row, PaymentMethodWrapper, SecondSection, FormOrganizerWrapper } from "./styles";
+import { CheckoutContainer, SectionHeader, FirstSection, FormTitle, HeaderText, Row, PaymentMethodWrapper, SecondSection, FormInsideOrganizerWrapper } from "./styles";
 
 export function Checkout() {
   // Render
@@ -14,7 +14,7 @@ export function Checkout() {
     <CheckoutContainer>
       <form>
         <FormTitle>Complete seu pedido</FormTitle>
-        <FormOrganizerWrapper>
+        <FormInsideOrganizerWrapper>
           <FirstSection>
             <SectionHeader>
 
@@ -115,7 +115,7 @@ export function Checkout() {
               </Button>
             </PaymentMethodWrapper>
           </SecondSection>
-        </FormOrganizerWrapper>
+        </FormInsideOrganizerWrapper>
       </form>
     </CheckoutContainer>
   )

@@ -8,7 +8,7 @@ export const CheckoutContainer = styled.section`
   margin-bottom: 5rem;
 `
 
-export const FormOrganizerWrapper = styled.div`
+export const FormInsideOrganizerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
