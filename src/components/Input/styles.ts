@@ -1,6 +1,10 @@
+// Packages
 import styled from 'styled-components'
 
-export const InputContainer = styled.input`
+// Types
+import { IInputProps } from '.'
+
+export const InputContainer = styled.input<IInputProps>`
   width: ${(props) => props.width ? props.width : 'auto'};
   height: 2.625rem;
   padding: 0.75rem;

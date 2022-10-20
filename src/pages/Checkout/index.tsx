@@ -1,20 +1,37 @@
 // Packages
-import { MapPinLine, CurrencyDollar, CreditCard, Bank, Money } from "phosphor-react";
+import {
+  MapPinLine,
+  CurrencyDollar,
+  CreditCard,
+  Bank,
+  Money
+} from "phosphor-react";
 
 // Components
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
 
 // Styles
-import { CheckoutContainer, SectionHeader, FirstSection, FormTitle, HeaderText, Row, PaymentMethodWrapper, SecondSection, FormInsideOrganizerWrapper } from "./styles";
+import {
+  CheckoutContainer,
+  SectionHeader,
+  FirstSection,
+  FormTitle,
+  HeaderText,
+  Row,
+  PaymentMethodWrapper,
+  SecondSection,
+  FormInsideOrganizerWrapper,
+  FormContainer
+} from "./styles";
 
 export function Checkout() {
   // Render
   return (
     <CheckoutContainer>
-      <form>
-        <FormTitle>Complete seu pedido</FormTitle>
+      <FormContainer>
         <FormInsideOrganizerWrapper>
+        <FormTitle>Complete seu pedido</FormTitle>
           <FirstSection>
             <SectionHeader>
 
@@ -116,7 +133,13 @@ export function Checkout() {
             </PaymentMethodWrapper>
           </SecondSection>
         </FormInsideOrganizerWrapper>
-      </form>
+
+        <div>
+          <FormTitle>Cafés selecionados</FormTitle>
+
+
+        </div>
+      </FormContainer>
     </CheckoutContainer>
   )
 }

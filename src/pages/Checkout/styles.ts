@@ -8,6 +8,12 @@ export const CheckoutContainer = styled.section`
   margin-bottom: 5rem;
 `
 
+export const FormContainer = styled.form`
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+`
+
 export const FormInsideOrganizerWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -70,4 +76,9 @@ export const PaymentMethodWrapper = styled.div`
   display: flex;
   gap: 1rem;
 `
+
+
+
+
+
 

@@ -1,8 +1,12 @@
+// Packages
 import styled from 'styled-components'
 
-export const ButtonContainer = styled.button`
-  height: 3.188rem;
-  width: 11.167rem;
+// Types
+import { IButtonProps } from '.'
+
+export const ButtonContainer = styled.button<IButtonProps>`
+  width: ${(props) => props.width ? props.width : '11.167rem'};
+  height: ${(props) => props.height ? props.height : '3.188rem'};
   box-sizing: border-box;
   border: none;
   border-radius: 0.375rem;
@@ -15,10 +19,6 @@ export const ButtonContainer = styled.button`
   gap: 0.5rem;
 
   &:hover {
-    border: 0.063rem solid ${(props) => props.theme['purple']};
-  }
-
-  &:active {
     border: 0.063rem solid ${(props) => props.theme['purple']};
   }
 `

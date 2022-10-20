@@ -8,7 +8,8 @@ import { ButtonContainer } from './styles';
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   asChild?: boolean;
-  width?: number;
+  width?: string;
+  height?: string;
 }
 
 export function Button({ children, asChild, ...props }: IButtonProps) {
@@ -22,3 +23,6 @@ export function Button({ children, asChild, ...props }: IButtonProps) {
     </ButtonContainer>
   )
 }
+
+
+
