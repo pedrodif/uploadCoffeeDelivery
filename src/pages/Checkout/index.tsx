@@ -23,7 +23,8 @@ import {
   PaymentMethodWrapper,
   SecondSection,
   FormInsideOrganizerWrapper,
-  FormContainer
+  FormContainer,
+  CheckoutPurchaseWrapper
 } from "./styles";
 
 export function Checkout() {
@@ -137,8 +138,18 @@ export function Checkout() {
 
         <div>
           <FormTitle>Cafés selecionados</FormTitle>
-          <Bill />
+          <CheckoutPurchaseWrapper>
+            <Bill />
 
+            <Button
+              type="submit"
+              color="#DBAC2C"
+              width="22rem"
+              height="2.875rem"
+            >
+              CONFIRMAR PEDIDO
+            </Button>
+          </CheckoutPurchaseWrapper>
         </div>
       </FormContainer>
     </CheckoutContainer>

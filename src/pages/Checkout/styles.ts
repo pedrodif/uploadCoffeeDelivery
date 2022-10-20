@@ -28,21 +28,39 @@ export const FormTitle = styled.strong`
 `
 
 const BaseSection = styled.div`
-  width: 40rem;
   border-radius: 0.375rem;
-  padding: 2.5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  box-sizing: border-box;
   background-color: ${(props) => props.theme['card-base']};
+  box-shadow: 0px 0px 0px 0.5px rgba(0, 0, 0, 0.4);
 `
 
 export const FirstSection = styled(BaseSection)`
+  width: 40rem;
   height: 23.25rem;
+  padding: 2.5rem;
   margin-top: 0.625rem;
 `
 export const SecondSection = styled(BaseSection)`
+  width: 40rem;
   height: 12.938rem;
+  padding: 2.5rem;
+`
+
+export const CheckoutPurchaseWrapper = styled(BaseSection)`
+  width: 28rem;
+  height: 100%;
+  padding: 0 2.5rem;
+  margin-top: 1.6rem;
+  border-top-right-radius: 2.25rem;
+  border-bottom-left-radius: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
 `
 
 export const Row = styled.div`
@@ -72,12 +90,11 @@ export const HeaderText = styled.div`
   }
 `
 
+
 export const PaymentMethodWrapper = styled.div`
   display: flex;
   gap: 1rem;
 `
-
-
 
 
 

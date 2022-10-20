@@ -7,7 +7,6 @@ export const CoffeeSelectedCard = styled.div`
   justify-content: space-around;
   align-items: flex-start;
   gap: 2rem;
-  margin-top: 2rem;
   border-bottom: 1px solid ${(props) => props.theme['base-button']};
 `
 
@@ -63,7 +62,6 @@ export const PurchaseInformation = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  margin-top: 2rem;
 `
 
 export const BillInformationWrapper = styled.div`
