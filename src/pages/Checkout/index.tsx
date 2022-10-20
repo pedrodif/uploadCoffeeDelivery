@@ -10,6 +10,7 @@ import {
 // Components
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
+import { Bill } from "../../components/Bill";
 
 // Styles
 import {
@@ -136,7 +137,7 @@ export function Checkout() {
 
         <div>
           <FormTitle>Cafés selecionados</FormTitle>
-
+          <Bill />
 
         </div>
       </FormContainer>

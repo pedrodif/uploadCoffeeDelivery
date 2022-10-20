@@ -7,6 +7,7 @@ export const CoffeeSelectedCard = styled.div`
   justify-content: space-around;
   align-items: flex-start;
   gap: 2rem;
+  margin-top: 2rem;
   border-bottom: 1px solid ${(props) => props.theme['base-button']};
 `
 
@@ -56,3 +57,25 @@ export const BillWrapper = styled.p`
   color:${(props) => props.theme['base-text']};
 `
 
+export const PurchaseInformation = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+`
+
+export const BillInformationWrapper = styled.div`
+  width: 348px;
+  height: 21px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: ${(props) => props.theme['base-text']};
+`
+
+export const FinalAmount = styled(BillInformationWrapper)`
+  color: ${(props) => props.theme['base-subtitle']};
+  font-size: 20px;
+`

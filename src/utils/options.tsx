@@ -1,5 +1,6 @@
 import { images } from "../assets";
 
+// Mocks
 export const coffeeOptionsList = [
   {
     id: '1',
@@ -197,5 +198,32 @@ export const coffeeOptionsList = [
     description: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',
     value: 9.90,
     imgSource: images.Irish,
+  },
+]
+
+export const BillItems =[
+  {
+    id: '1',
+    title: 'Expresso Tradicional',
+    ingredients: 'TRADICIONAL',
+    description: 'O tradicional café feito com água quente e grãos moídos',
+    value: 9.90,
+    imgSource: images.Traditional,
+  },
+  {
+    id: '2',
+    title: 'Expresso Americano',
+    ingredients: 'TRADICIONAL',
+    description: 'Expresso diluído, menos intenso que o tradicional',
+    value: 9.90,
+    imgSource: images.American,
+  },
+  {
+    id: '12',
+    title: 'Havaiano',
+    ingredients: 'ESPECIAL',
+    description: 'Bebida adocicada preparada com café e leite de coco',
+    value: 9.90,
+    imgSource: images.HawainKona,
   },
 ]
