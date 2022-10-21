@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
 export const CheckoutContainer = styled.section`
-  margin: 0 auto;
   width: 71rem;
-  box-sizing: border-box;
+  margin: 0 auto;
   margin-top: 2rem;
   margin-bottom: 5rem;
+  box-sizing: border-box;
 `
 
 export const FormContainer = styled.form`
@@ -28,11 +28,12 @@ export const FormTitle = styled.strong`
 `
 
 const BaseSection = styled.div`
-  border-radius: 0.375rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1rem;
   box-sizing: border-box;
+  border-radius: 0.375rem;
   background-color: ${(props) => props.theme['card-base']};
   box-shadow: 0px 0px 0px 0.5px rgba(0, 0, 0, 0.4);
 `
@@ -43,24 +44,22 @@ export const FirstSection = styled(BaseSection)`
   padding: 2.5rem;
   margin-top: 0.625rem;
 `
+
 export const SecondSection = styled(BaseSection)`
   width: 40rem;
   height: 12.938rem;
   padding: 2.5rem;
 `
-
+// parei aqui
 export const CheckoutPurchaseWrapper = styled(BaseSection)`
   width: 28rem;
   height: 100%;
+  align-items: center;
+  gap: 1.5rem;
   padding: 0 2.5rem;
   margin-top: 1.6rem;
   border-top-right-radius: 2.25rem;
   border-bottom-left-radius: 2.25rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
 `
 
 export const Row = styled.div`

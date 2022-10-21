@@ -33,7 +33,7 @@ export function Checkout() {
     <CheckoutContainer>
       <FormContainer>
         <FormInsideOrganizerWrapper>
-        <FormTitle>Complete seu pedido</FormTitle>
+          <FormTitle>Complete seu pedido</FormTitle>
           <FirstSection>
             <SectionHeader>
 
