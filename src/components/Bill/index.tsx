@@ -41,8 +41,8 @@ function CoffeeSelected({ title, value, imgSource }: ICoffeeSelected) {
       </ImageWrapper>
 
       <FormInsideOrganizerWrapper>
-        <span>{title}</span>
 
+        <span>{title}</span>
         <Row>
           <AmountWrapper>
             <Minus color="#4B2995" />
@@ -61,8 +61,8 @@ function CoffeeSelected({ title, value, imgSource }: ICoffeeSelected) {
             />
             REMOVER
           </Button>
-
         </Row>
+
       </FormInsideOrganizerWrapper>
 
       <BillWrapper>
@@ -88,18 +88,18 @@ export function Bill() {
 
       <PurchaseInformation>
         <BillInformationWrapper>
-          <span>Total de itens</span>
-          <span>R$ 29,70</span>
+          <p>Total de itens</p>
+          <p>R$ 29,70</p>
         </BillInformationWrapper>
 
         <BillInformationWrapper>
-          <span>Entrega</span>
-          <span>R$ 3,50</span>
+          <p>Entrega</p>
+          <p>R$ 3,50</p>
         </BillInformationWrapper>
 
         <FinalAmount>
-          <strong>Total</strong>
-          <strong>R$ 33,20</strong>
+          <p>Total</p>
+          <p>R$ 33,20</p>
         </FinalAmount>
       </PurchaseInformation>
     </>

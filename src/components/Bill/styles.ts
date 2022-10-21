@@ -7,7 +7,7 @@ export const CoffeeSelectedCard = styled.div`
   justify-content: space-around;
   align-items: flex-start;
   gap: 2rem;
-  border-bottom: 1px solid ${(props) => props.theme['base-button']};
+  border-bottom: 0.063rem solid ${(props) => props.theme['base-button']};
 `
 
 export const ImageWrapper = styled.div`
@@ -17,14 +17,19 @@ export const ImageWrapper = styled.div`
 `
 
 export const ImageStyle = styled.img`
-  width: 64px;
-  height: 64px;
+  width: 4rem;
+  height: 4rem;
 `
 
 export const FormInsideOrganizerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+`
+
+export const PurchaseInformation = styled(FormInsideOrganizerWrapper)`
+  justify-content: center;
+  align-items: center;
 `
 
 export const Row = styled.div`
@@ -56,24 +61,17 @@ export const BillWrapper = styled.p`
   color:${(props) => props.theme['base-text']};
 `
 
-export const PurchaseInformation = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-`
 
 export const BillInformationWrapper = styled.div`
-  width: 348px;
-  height: 21px;
+  width: 21.75rem;
+  height: 1.313rem;
   display: flex;
   justify-content: space-between;
-  gap: 8px;
+  gap: 0.5rem;
   color: ${(props) => props.theme['base-text']};
 `
 
 export const FinalAmount = styled(BillInformationWrapper)`
   color: ${(props) => props.theme['base-subtitle']};
-  font-size: 20px;
+  font-size: 1.25rem;
 `
