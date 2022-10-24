@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const DeliveryContainer = styled.div`
   width: 71rem;
-  height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
   display: flex;
@@ -12,7 +11,7 @@ export const DeliveryContainer = styled.div`
 export const TitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 4rem;
+  margin-top: 3rem;
   color: ${(props) => props.theme['base-subtitle']};
   font-size: 1.25rem;
 `
@@ -66,6 +65,6 @@ export const PaymentInformation = styled(DeliveryBoxBaseStyle)`
   }
 `
 export const DeliveryImageWrapper = styled.div`
-  margin-top: 162px;
+  margin-top: 148px;
 `
 
