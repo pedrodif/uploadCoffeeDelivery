@@ -2,17 +2,17 @@ import styled from 'styled-components'
 
 export const DeliveryContainer = styled.div`
   width: 71rem;
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  border: 1px solid black;
+  display: flex;
+  gap: 5rem;
 `
 
 export const TitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-top: 6rem;
+  margin-top: 4rem;
   color: ${(props) => props.theme['base-subtitle']};
   font-size: 1.25rem;
 `
@@ -22,5 +22,50 @@ export const DeliveryTitle = styled.strong`
   font-size: 2rem;
   font-weight: 800;
   color: ${(props) => props.theme['yellow-dark']};
+`
+
+export const DeliveryInformation = styled.div`
+  width: 526px;
+  height: 270px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  border: 1px solid black;
+  border-radius: 0.375rem;
+  border-top-right-radius: 2.25rem;
+  border-bottom-left-radius: 2.25rem;
+`
+
+const DeliveryBoxBaseStyle = styled.div`
+  width: 370px;
+  height: 42px;
+  line-height: 20.8px;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 1rem;
+`
+
+export const AddressInformation = styled(DeliveryBoxBaseStyle)`
+  p {
+    width: 310px;
+
+  }
+`
+export const TimeInformation = styled(DeliveryBoxBaseStyle)`
+  p {
+    width: 160px;
+  }
+`
+export const PaymentInformation = styled(DeliveryBoxBaseStyle)`
+  p {
+    width: 192px;
+  }
+`
+export const DeliveryImageWrapper = styled.div`
+  margin-top: 162px;
 `
 
