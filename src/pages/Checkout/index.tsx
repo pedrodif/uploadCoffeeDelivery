@@ -72,7 +72,7 @@ export function Checkout() {
                 type="text"
                 placeholder="Complemento"
                 width="21.75rem"
-            />
+              />
             </Row>
 
             <Row>
@@ -86,13 +86,13 @@ export function Checkout() {
                 type="text"
                 placeholder="Cidade"
                 width="17.25rem"
-            />
+              />
 
               <Input
                 type="text"
                 placeholder="UF"
                 width="3.75rem"
-            />
+              />
             </Row>
           </FirstSection>
 
@@ -143,9 +143,11 @@ export function Checkout() {
 
             <Button
               type="submit"
-              color="#DBAC2C"
               width="22rem"
               height="2.875rem"
+              backgroundColor="#DBAC2C"
+              color="#FFFFFF"
+              weight="700"
             >
               CONFIRMAR PEDIDO
             </Button>

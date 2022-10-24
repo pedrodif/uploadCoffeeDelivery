@@ -10,6 +10,8 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean;
   width?: string;
   height?: string;
+  backgroundColor?: string;
+  weight?: string;
 }
 
 export function Button({ children, asChild, ...props }: IButtonProps) {

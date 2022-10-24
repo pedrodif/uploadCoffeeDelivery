@@ -4,7 +4,7 @@ export const CheckoutContainer = styled.section`
   width: 71rem;
   margin: 0 auto;
   margin-top: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
   box-sizing: border-box;
 `
 
@@ -54,8 +54,11 @@ export const SecondSection = styled(BaseSection)`
 export const CheckoutPurchaseWrapper = styled(BaseSection)`
   width: 28rem;
   height: 100%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  justify-content: center;
+  gap: 2rem;
   padding: 0 2.5rem;
   margin-top: 1.6rem;
   border-top-right-radius: 2.25rem;
