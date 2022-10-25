@@ -1,11 +1,16 @@
-// Components
-import { CoffeeGroup } from "../icons/CoffeeGroup";
-import { PackageGroup } from "../icons/PackageGroup";
-import { ShoppingCartGroup } from "../icons/ShoppingCartGroup";
-import { TimerGroup } from "../icons/TimerGroup";
+// Packages
+import {
+  ShoppingCart,
+  Timer,
+  Package,
+  Coffee
+} from 'phosphor-react';
 
-// assets
-import coffeeBannerImg from "../../assets/coffeeBannerImg.png"
+// Components
+import { IconBackground } from "../IconBackground";
+
+// Assets
+import coffeeBannerImg from "../../assets/coffeeBannerImg.png";
 
 // Styles
 import {
@@ -30,24 +35,64 @@ export function HomeAd() {
         <BannerBody>
           <div>
             <BannerBodyBox>
-              <ShoppingCartGroup />
+              <IconBackground
+                backgroundColor="#C47F17"
+                width="2rem"
+                height="2rem"
+              >
+                <ShoppingCart
+                  size={17}
+                  color="#FAFAFA"
+                  weight="fill"
+                />
+              </IconBackground>
               <p>Compra simples e segura</p>
             </BannerBodyBox>
 
             <BannerBodyBox>
-              <TimerGroup />
+              <IconBackground
+                backgroundColor="#DBAC2C"
+                width="2rem"
+                height="2rem"
+              >
+                <Timer
+                  size={17}
+                  color="#FAFAFA"
+                  weight="fill"
+                />
+              </IconBackground>
               <p>Entrega rápida e rastreada</p>
             </BannerBodyBox>
           </div>
 
           <div>
             <BannerBodyBox>
-              <PackageGroup />
+              <IconBackground
+                backgroundColor="#574F4D"
+                width="2rem"
+                height="2rem"
+              >
+                <Package
+                  size={17}
+                  color="#FAFAFA"
+                  weight="fill"
+                />
+              </IconBackground>
               <p>Embalagem mantém o café intacto</p>
             </BannerBodyBox>
 
             <BannerBodyBox>
-              <CoffeeGroup />
+              <IconBackground
+                backgroundColor="#8047F8"
+                width="2rem"
+                height="2rem"
+              >
+                <Coffee
+                  size={17}
+                  color="#FAFAFA"
+                  weight="fill"
+                />
+              </IconBackground>
               <p>O café chega fresquinho até você</p>
             </BannerBodyBox>
           </div>

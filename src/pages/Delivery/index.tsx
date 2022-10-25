@@ -28,11 +28,12 @@ export function Delivery() {
                 weight="fill"
               />
             </IconBackground>
-            <p>
+
+            <section>
               Entrega em
               <strong> Rua João Daniel Martinelli, 102 </strong>
               Farrapos - Porto Alegre, RS
-            </p>
+            </section>
           </AddressInformation>
 
           <TimeInformation>
@@ -45,10 +46,11 @@ export function Delivery() {
                 weight="fill"
               />
             </IconBackground>
-            <p>
-              Previsão de entrega
+
+            <section>
+              <p>Previsão de entrega</p>
               <strong>20 min - 30 min</strong>
-            </p>
+            </section>
           </TimeInformation>
 
           <PaymentInformation>
@@ -61,10 +63,11 @@ export function Delivery() {
                 weight="fill"
               />
             </IconBackground>
-            <p>
-              Pagamento na entrega
+
+            <section>
+              <p>Pagamento na entrega</p>
               <strong>Cartão de Crédito</strong>
-            </p>
+            </section>
           </PaymentInformation>
         </DeliveryInformation>
       </div>

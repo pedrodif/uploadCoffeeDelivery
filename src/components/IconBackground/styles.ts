@@ -5,8 +5,8 @@ import styled from 'styled-components'
 import { IIconBackgroundProps } from '.'
 
 export const IconBackgroundContainer = styled.div<IIconBackgroundProps>`
-  width: 2.5rem;
-  height: 2.5rem;
+  width: ${(props) => props.width ? props.width : '2.5rem'};
+  height: ${(props) => props.height ? props.height : '2.5rem'};
   border-radius: 50%;
   display: flex;
   justify-content: center;

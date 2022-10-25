@@ -58,20 +58,20 @@ const DeliveryBoxBaseStyle = styled.div`
   height: 42px;
   line-height: 20.8px;
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   gap: 1rem;
+  color: ${(props) => props.theme['base-text']};
 `
 
 export const AddressInformation = styled(DeliveryBoxBaseStyle)`
-  p {
+  section {
     width: 310px;
-
   }
 `
 export const TimeInformation = styled(DeliveryBoxBaseStyle)`
-  p {
-    width: 160px;
+  section {
+    width: 167px;
+
   }
 `
 export const PaymentInformation = styled(DeliveryBoxBaseStyle)`
