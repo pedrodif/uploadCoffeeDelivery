@@ -1,9 +1,9 @@
 // Packages
 import {
-  ShoppingCart,
   Timer,
+  Coffee,
   Package,
-  Coffee
+  ShoppingCart
 } from 'phosphor-react';
 
 // Components
@@ -16,11 +16,11 @@ import coffeeBannerImg from "../../assets/coffeeBannerImg.png";
 import {
   Banner,
   BannerBody,
-  BannerBodyBox,
+  HeaderTitle,
   BannerHeader,
-  BannerTextWrapper,
+  BannerBodyBox,
   HeaderSubtitle,
-  HeaderTitle
+  BannerTextWrapper
 } from "./styles";
 
 export function HomeAd() {
