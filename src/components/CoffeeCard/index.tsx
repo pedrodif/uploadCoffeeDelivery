@@ -1,5 +1,9 @@
 // Packages
-import { Minus, Plus, ShoppingCartSimple } from "phosphor-react";
+import {
+  Plus,
+  Minus,
+  ShoppingCartSimple
+} from "phosphor-react";
 
 // Styles
 import {
