@@ -32,10 +32,25 @@ export const DeliveryInformation = styled.div`
   gap: 2rem;
   margin-top: 35px;
   margin-bottom: 35px;
-  border: 1px solid black;
   border-radius: 0.375rem;
   border-top-right-radius: 2.25rem;
   border-bottom-left-radius: 2.25rem;
+  position: relative;
+  $border: 5px;
+  border: solid $border transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom left, #DBAC2C, #8047F8);
+    z-index: -1;
+    margin: -6px;
+    border-radius: 0.375rem;
+    border-top-right-radius: 2.25rem;
+    border-bottom-left-radius: 2.25rem;
+  }
+
 `
 
 const DeliveryBoxBaseStyle = styled.div`
