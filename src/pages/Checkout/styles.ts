@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+// Packages
+import styled from 'styled-components';
 
 export const CheckoutContainer = styled.section`
   width: 71rem;

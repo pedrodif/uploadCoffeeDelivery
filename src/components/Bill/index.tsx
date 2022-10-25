@@ -10,16 +10,16 @@ import { Button } from "../Button";
 
 // Styles
 import {
-  AmountWrapper,
-  BillWrapper,
-  ImageWrapper,
-  CoffeeSelectedCard,
-  ImageStyle,
-  FormInsideOrganizerWrapper,
   Row,
-  BillInformationWrapper,
+  ImageStyle,
+  BillWrapper,
+  FinalAmount,
+  ImageWrapper,
+  AmountWrapper,
+  CoffeeSelectedCard,
   PurchaseInformation,
-  FinalAmount
+  BillInformationWrapper,
+  FormInsideOrganizerWrapper
 } from "./styles";
 
 // Utils
@@ -73,6 +73,7 @@ function CoffeeSelected({ title, value, imgSource }: ICoffeeSelected) {
 }
 
 export function Bill() {
+  // Render
   return(
     <>
       {BillItems?.map(item => {

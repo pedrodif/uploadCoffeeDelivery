@@ -1,30 +1,30 @@
 // Packages
 import {
-  MapPinLine,
-  CurrencyDollar,
-  CreditCard,
   Bank,
-  Money
+  Money,
+  CreditCard,
+  MapPinLine,
+  CurrencyDollar
 } from "phosphor-react";
 
 // Components
-import { Button } from "../../components/Button";
-import { Input } from "../../components/Input";
 import { Bill } from "../../components/Bill";
+import { Input } from "../../components/Input";
+import { Button } from "../../components/Button";
 
 // Styles
 import {
-  CheckoutContainer,
-  SectionHeader,
-  FirstSection,
+  Row,
   FormTitle,
   HeaderText,
-  Row,
-  PaymentMethodWrapper,
+  FirstSection,
+  SectionHeader,
   SecondSection,
-  FormInsideOrganizerWrapper,
   FormContainer,
-  CheckoutPurchaseWrapper
+  CheckoutContainer,
+  PaymentMethodWrapper,
+  CheckoutPurchaseWrapper,
+  FormInsideOrganizerWrapper
 } from "./styles";
 
 export function Checkout() {

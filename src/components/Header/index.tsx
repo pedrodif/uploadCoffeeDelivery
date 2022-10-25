@@ -6,8 +6,8 @@ import { Logo } from "../Logo";
 
 // Styles
 import {
-  HeaderContainer,
   HeaderNavBox,
+  HeaderContainer,
   HeaderLocationButton,
   HeaderShoppingButton
 } from "./styles";

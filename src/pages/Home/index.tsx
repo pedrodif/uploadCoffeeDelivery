@@ -8,7 +8,6 @@ import { CardsLayout, MenuContainer, MenuTitle } from "./styles";
 // Utils
 import { coffeeOptionsList } from "../../utils/options";
 
-
 export function Home() {
   // Render
   return (

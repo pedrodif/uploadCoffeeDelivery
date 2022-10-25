@@ -3,26 +3,26 @@ import { Minus, Plus, ShoppingCartSimple } from "phosphor-react";
 
 // Styles
 import {
-  CardBillWrapper,
-  CardBillValue,
-  CardContainer,
-  CardImageWrapper,
+  CardTitle,
   Ingredients,
-  CardIngredientsWrapper,
+  CardContainer,
+  CardBillValue,
+  CardBillWrapper,
+  CardImageWrapper,
+  CardAmountWrapper,
   CardShoppingWrapper,
   CardShopppingButton,
-  CardTitle,
-  CardDescriptionWrapper,
-  CardAmountWrapper
+  CardIngredientsWrapper,
+  CardDescriptionWrapper
 } from "./styles";
 
 export interface ICoffeeCardProps {
   id?: string;
-  title: string;
-  ingredients: string | IIngredients[];
-  description: string;
   value: number;
+  title: string;
   imgSource: string;
+  description: string;
+  ingredients: string | IIngredients[];
 }
 interface IIngredients {
   id: string;
@@ -31,7 +31,6 @@ interface IIngredients {
 interface IIngridientsBaseComponent {
   value: string;
 }
-
 
 export function CoffeeCard({ imgSource, ingredients, title, description, value }: ICoffeeCardProps) {
   // Components

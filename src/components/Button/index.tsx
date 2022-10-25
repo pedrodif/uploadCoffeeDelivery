@@ -1,17 +1,17 @@
 // Packages
-import { ButtonHTMLAttributes, ReactNode } from 'react';
 import { Slot } from '@radix-ui/react-slot';
+import { ButtonHTMLAttributes, ReactNode } from 'react';
 
 // Styles
 import { ButtonContainer } from './styles';
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: ReactNode;
-  asChild?: boolean;
   width?: string;
   height?: string;
-  backgroundColor?: string;
   weight?: string;
+  asChild?: boolean;
+  children: ReactNode;
+  backgroundColor?: string;
 }
 
 export function Button({ children, asChild, ...props }: IButtonProps) {

@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+// Packages
+import styled from 'styled-components';
 
 export const Banner = styled.section`
   width: 71rem;

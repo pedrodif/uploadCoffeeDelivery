@@ -1,3 +1,4 @@
+// Assets
 import { images } from "../assets";
 
 // Mocks

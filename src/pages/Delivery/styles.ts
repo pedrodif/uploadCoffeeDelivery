@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+// Packages
+import styled from 'styled-components';
 
 export const DeliveryContainer = styled.div`
   width: 71rem;
