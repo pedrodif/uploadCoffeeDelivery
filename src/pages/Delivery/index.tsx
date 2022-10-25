@@ -1,12 +1,25 @@
 // Packages
-import { MapPin, Timer, CurrencyDollar } from 'phosphor-react'
+import {
+  Timer,
+  MapPin,
+  CurrencyDollar
+} from 'phosphor-react';
 
 // Components
-import { IconBackground } from '../../components/IconBackground';
 import DeliveryImage from '../../components/DeliveryImage';
+import { IconBackground } from '../../components/IconBackground';
 
 // Styles
-import { DeliveryContainer, AddressInformation, DeliveryTitle, TitleWrapper, TimeInformation, PaymentInformation, DeliveryInformation, DeliveryImageWrapper } from "./styles";
+import {
+  TitleWrapper,
+  DeliveryTitle,
+  TimeInformation,
+  DeliveryContainer,
+  PaymentInformation,
+  AddressInformation,
+  DeliveryInformation,
+  DeliveryImageWrapper
+} from "./styles";
 
 export function Delivery() {
   return (
