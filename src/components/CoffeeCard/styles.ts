@@ -107,14 +107,4 @@ export const CardBillValue = styled.span`
   font-family: 'Baloo 2';
 `
 
-export const CardShopppingButton = styled.button`
-  width: 2.375rem;
-  height: 2.375rem;
-  border: none;
-  border-radius: 0.375rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: ${(props) => props.theme['purple-dark']};
-`
 

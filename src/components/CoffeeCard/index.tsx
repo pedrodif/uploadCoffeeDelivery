@@ -15,10 +15,12 @@ import {
   CardImageWrapper,
   CardAmountWrapper,
   CardShoppingWrapper,
-  CardShopppingButton,
   CardIngredientsWrapper,
   CardDescriptionWrapper
 } from "./styles";
+
+// Components
+import { Button } from "../Button";
 
 export interface ICoffeeCardProps {
   id?: string;
@@ -101,11 +103,18 @@ export function CoffeeCard({ imgSource, ingredients, title, description, value }
           <Plus color="#4B2995" />
         </CardAmountWrapper>
 
-        <CardShopppingButton
+        <Button
           type="button"
+          width="2.375rem"
+          height="2.375rem"
+          backgroundColor="#4B2995"
         >
-          <ShoppingCartSimple color="#F3F2F2" weight="fill" size={23} />
-        </CardShopppingButton>
+          <ShoppingCartSimple
+            color="#F3F2F2"
+            weight="fill"
+            size={23}
+          />
+        </Button>
       </CardShoppingWrapper>
     </CardContainer>
   )
