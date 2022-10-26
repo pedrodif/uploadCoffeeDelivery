@@ -7,8 +7,11 @@ import { ButtonContainer } from './styles';
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   width?: string;
+  color?: string;
   height?: string;
   weight?: string;
+  padding?: string;
+  fontSize?: string;
   asChild?: boolean;
   children: ReactNode;
   backgroundColor?: string;
