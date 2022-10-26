@@ -1,5 +1,6 @@
 // Packages
 import { MapPin, ShoppingCart } from "phosphor-react";
+import { useNavigate  } from "react-router-dom";
 
 // Components
 import { Logo } from "../Logo";
@@ -7,14 +8,25 @@ import { Button } from "../Button";
 
 // Styles
 import {
+  LogoBox,
   HeaderNavBox,
   HeaderContainer,
 } from "./styles";
 
 export function Header() {
+  const navigate = useNavigate();
+
+  function handleClick(path: string) {
+    navigate(path);
+  }
+
   return (
     <HeaderContainer>
-      <Logo />
+      <LogoBox
+        onClick={() => handleClick("/")}
+      >
+        <Logo />
+      </LogoBox>
       <HeaderNavBox>
         <Button
           type="button"
@@ -36,6 +48,7 @@ export function Header() {
           width="2.375rem"
           height="2.375rem"
           backgroundColor="#F1E9C9"
+          onClick={() => handleClick("/checkout")}
         >
           <ShoppingCart
             color="#C47F17"

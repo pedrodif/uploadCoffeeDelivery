@@ -14,6 +14,10 @@ export const HeaderContainer = styled.header`
   left: 0;
 `
 
+export const LogoBox = styled.div`
+  cursor: pointer;
+`
+
 export const HeaderNavBox = styled.div`
   width: 13.5rem;
   display: flex;
