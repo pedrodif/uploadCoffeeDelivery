@@ -6,6 +6,7 @@ export const DeliveryContainer = styled.div`
   margin: 0 auto;
   box-sizing: border-box;
   display: flex;
+  align-items: center;
   gap: 5rem;
 `
 
@@ -13,8 +14,8 @@ export const TitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
-  color: ${(props) => props.theme['base-subtitle']};
   font-size: 1.25rem;
+  color: ${(props) => props.theme['base-subtitle']};
 `
 
 export const DeliveryTitle = styled.strong`
@@ -24,40 +25,37 @@ export const DeliveryTitle = styled.strong`
   color: ${(props) => props.theme['yellow-dark']};
 `
 
-export const DeliveryInformation = styled.div`
-  width: 526px;
-  height: 270px;
-  padding: 40px;
+const InformationBaseBox = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 35px;
-  margin-bottom: 35px;
   border-radius: 0.375rem;
   border-top-right-radius: 2.25rem;
   border-bottom-left-radius: 2.25rem;
+`
+
+export const DeliveryInformationGradientWrapper = styled(InformationBaseBox)`
+  width: 33rem;
+  height: 17rem;
+  margin-top: 2.188rem;
+  margin-bottom: 2.188rem;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  $border: 5px;
-  border: solid $border transparent;
+  background: linear-gradient(0.25turn, #DBAC2C, #8047f8);
+`
 
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom left, #DBAC2C, #8047F8);
-    z-index: -1;
-    margin: -6px;
-    border-radius: 0.375rem;
-    border-top-right-radius: 2.25rem;
-    border-bottom-left-radius: 2.25rem;
-  }
-
+export const DeliveryInformation = styled(InformationBaseBox)`
+  width: 32.875rem;
+  height: 16.875rem;
+  padding: 2.5rem;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: ${(props) => props.theme['white-base']};
 `
 
 const DeliveryBoxBaseStyle = styled.div`
-  width: 370px;
-  height: 42px;
-  line-height: 20.8px;
+  width: 23.125rem;
+  height: 2.625rem;
+  line-height: 1.3rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -66,21 +64,17 @@ const DeliveryBoxBaseStyle = styled.div`
 
 export const AddressInformation = styled(DeliveryBoxBaseStyle)`
   section {
-    width: 310px;
+    width: 19.375rem;
   }
 `
 export const TimeInformation = styled(DeliveryBoxBaseStyle)`
   section {
-    width: 167px;
+    width: 10.438rem;
 
   }
 `
 export const PaymentInformation = styled(DeliveryBoxBaseStyle)`
-  p {
-    width: 192px;
+  section {
+    width: 12rem;
   }
 `
-export const DeliveryImageWrapper = styled.div`
-  margin-top: 148px;
-`
-

@@ -18,7 +18,7 @@ import {
   PaymentInformation,
   AddressInformation,
   DeliveryInformation,
-  DeliveryImageWrapper
+  DeliveryInformationGradientWrapper,
 } from "./styles";
 
 export function Delivery() {
@@ -30,64 +30,66 @@ export function Delivery() {
           <p>Agora é só aguardar que logo o café chegará até você</p>
         </TitleWrapper>
 
-        <DeliveryInformation>
-          <AddressInformation>
-            <IconBackground
-              backgroundColor="#8047F8"
-            >
-              <MapPin
-                size={22}
-                color="#FAFAFA"
-                weight="fill"
-              />
-            </IconBackground>
+        <DeliveryInformationGradientWrapper>
+          <DeliveryInformation>
+            <AddressInformation>
+              <IconBackground
+                backgroundColor="#8047F8"
+              >
+                <MapPin
+                  size={22}
+                  color="#FAFAFA"
+                  weight="fill"
+                />
+              </IconBackground>
 
-            <section>
-              Entrega em
-              <strong> Rua João Daniel Martinelli, 102 </strong>
-              Farrapos - Porto Alegre, RS
-            </section>
-          </AddressInformation>
+              <section>
+                Entrega em
+                <strong> Rua João Daniel Martinelli, 102 </strong>
+                Farrapos - Porto Alegre, RS
+              </section>
+            </AddressInformation>
 
-          <TimeInformation>
-            <IconBackground
-              backgroundColor="#DBAC2C"
-            >
-              <Timer
-                size={22}
-                color="#FAFAFA"
-                weight="fill"
-              />
-            </IconBackground>
+            <TimeInformation>
+              <IconBackground
+                backgroundColor="#DBAC2C"
+              >
+                <Timer
+                  size={22}
+                  color="#FAFAFA"
+                  weight="fill"
+                />
+              </IconBackground>
 
-            <section>
-              <p>Previsão de entrega</p>
-              <strong>20 min - 30 min</strong>
-            </section>
-          </TimeInformation>
+              <section>
+                <p>Previsão de entrega</p>
+                <strong>20 min - 30 min</strong>
+              </section>
+            </TimeInformation>
 
-          <PaymentInformation>
-            <IconBackground
-              backgroundColor="#C47F17"
-            >
-              <CurrencyDollar
-                size={22}
-                color="#FAFAFA"
-                weight="fill"
-              />
-            </IconBackground>
+            <PaymentInformation>
+              <IconBackground
+                backgroundColor="#C47F17"
+              >
+                <CurrencyDollar
+                  size={22}
+                  color="#FAFAFA"
+                  weight="fill"
+                />
+              </IconBackground>
 
-            <section>
-              <p>Pagamento na entrega</p>
-              <strong>Cartão de Crédito</strong>
-            </section>
-          </PaymentInformation>
-        </DeliveryInformation>
+              <section>
+                <p>Pagamento na entrega</p>
+                <strong>Cartão de Crédito</strong>
+              </section>
+            </PaymentInformation>
+          </DeliveryInformation>
+        </DeliveryInformationGradientWrapper>
       </div>
 
-      <DeliveryImageWrapper>
+      <div>
         <DeliveryImage />
-      </DeliveryImageWrapper>
+      </div>
     </DeliveryContainer>
   )
 }
