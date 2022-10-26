@@ -1,5 +1,8 @@
 // Packages
-import { MapPin, ShoppingCart } from "phosphor-react";
+import {
+  MapPin,
+  ShoppingCart
+} from "phosphor-react";
 import { useNavigate  } from "react-router-dom";
 
 // Components
@@ -16,6 +19,7 @@ import {
 export function Header() {
   const navigate = useNavigate();
 
+  // Functions
   function handleClick(path: string) {
     navigate(path);
   }
@@ -27,6 +31,7 @@ export function Header() {
       >
         <Logo />
       </LogoBox>
+
       <HeaderNavBox>
         <Button
           type="button"

@@ -20,3 +20,7 @@ export const MediaContainer = styled.div`
     color: ${(props) => props.theme['base-text']};
   }
 `
+
+export const LogoBox = styled.div`
+  cursor: pointer;
+`

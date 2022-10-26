@@ -6,6 +6,7 @@ import {
   MapPinLine,
   CurrencyDollar
 } from "phosphor-react";
+import { useNavigate  } from "react-router-dom";
 
 // Components
 import { Bill } from "../../components/Bill";
@@ -28,6 +29,13 @@ import {
 } from "./styles";
 
 export function Checkout() {
+  const navigate = useNavigate();
+
+  // Functions
+  function handleClick(path: string) {
+    navigate(path);
+  }
+
   // Render
   return (
     <CheckoutContainer>
@@ -148,6 +156,7 @@ export function Checkout() {
               backgroundColor="#DBAC2C"
               color="#FFFFFF"
               weight="700"
+              onClick={() => handleClick("/delivery")}
             >
               CONFIRMAR PEDIDO
             </Button>

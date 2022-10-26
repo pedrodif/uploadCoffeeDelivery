@@ -1,17 +1,38 @@
 // Packages
-import { InstagramLogo, WhatsappLogo, FacebookLogo } from "phosphor-react";
+import {
+  InstagramLogo,
+  WhatsappLogo,
+  FacebookLogo
+} from "phosphor-react";
+import { useNavigate  } from "react-router-dom";
 
 // Components
 import { Logo } from "../Logo";
 
 // Styles
-import { FooterContainer, MediaContainer } from "./styles";
+import {
+  FooterContainer,
+  LogoBox,
+  MediaContainer
+} from "./styles";
 
 export function Footer() {
+  const navigate = useNavigate();
+
+  // Functions
+  function handleClick(path: string) {
+    navigate(path);
+  }
+
   // Render
   return (
     <FooterContainer>
-      <Logo />
+      <LogoBox
+        onClick={() => handleClick("/")}
+      >
+        <Logo />
+      </LogoBox>
+
       <MediaContainer>
         <a href="#">
           <WhatsappLogo size="22" weight="bold" />
