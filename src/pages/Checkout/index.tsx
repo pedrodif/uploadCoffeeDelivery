@@ -6,6 +6,12 @@ import {
   MapPinLine,
   CurrencyDollar
 } from "phosphor-react";
+import * as zod from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
+
+// Hooks
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { useNavigate  } from "react-router-dom";
 
 // Components
@@ -28,18 +34,56 @@ import {
   FormInsideOrganizerWrapper
 } from "./styles";
 
+const FormValidationSchema = zod.object({
+  zipCode: zod.string().min(8, 'Informe o CEP'),
+  street: zod.string().min(1, 'Informe o nome da Rua'),
+  addressNumber: zod.string().min(1, 'Informe o número da residência de entrega'),
+  neighborhood: zod.string().min(1, 'Informe o Bairro de entrega'),
+  additionalInfo: zod.string(),
+  city: zod.string().min(1, 'Informe a Cidade de entrega'),
+  FU: zod.string().min(1, 'Informe a Unidade Federativa da Cidade informada'),
+})
+
+type IDeliveryFormData = zod.infer<typeof FormValidationSchema>
+
 export function Checkout() {
+  // Hooks
   const navigate = useNavigate();
 
+  const DeliveryForm = useForm<IDeliveryFormData>({
+    resolver: zodResolver(FormValidationSchema),
+    defaultValues: {
+      zipCode: '',
+      street: '',
+      addressNumber: '',
+      neighborhood: '',
+      additionalInfo: '',
+      city: '',
+      FU: '',
+    },
+  })
+
+  const { register, handleSubmit, watch } = DeliveryForm;
+
+  // States
+  const [dataToSubmit, setDataToSubmit] = useState<IDeliveryFormData>();
+
   // Functions
+  const handleSubmitForm = () => {
+    console.log(dataToSubmit);
+  }
+
   function handleClick(path: string) {
+    handleSubmitForm();
     navigate(path);
   }
 
   // Render
   return (
     <CheckoutContainer>
-      <FormContainer>
+      <FormContainer
+        onSubmit={(data) => handleSubmit(setDataToSubmit(data))}
+      >
         <FormInsideOrganizerWrapper>
           <FormTitle>Complete seu pedido</FormTitle>
           <FirstSection>
@@ -59,47 +103,61 @@ export function Checkout() {
 
             <Input
               type="text"
+              id="zipCode"
               placeholder="CEP"
               width="12.5rem"
+              {...register('zipCode')}
             />
 
             <Input
               type="text"
+              id="street"
               placeholder="Rua"
               width="35rem"
+              {...register('street')}
             />
 
             <Row>
               <Input
                 type="text"
+                id="addressNumber"
                 placeholder="Número"
                 width="12.5rem"
+                {...register('addressNumber')}
               />
 
               <Input
                 type="text"
+                id="additionalInfo"
                 placeholder="Complemento"
                 width="21.75rem"
+                {...register('additionalInfo')}
               />
             </Row>
 
             <Row>
               <Input
                 type="text"
+                id="neighborhood"
                 placeholder="Bairro"
                 width="12.5rem"
+                {...register('neighborhood')}
               />
 
               <Input
                 type="text"
+                id="city"
                 placeholder="Cidade"
                 width="17.25rem"
+                {...register('city')}
               />
 
               <Input
                 type="text"
+                id="FU"
                 placeholder="UF"
                 width="3.75rem"
+                {...register('FU')}
               />
             </Row>
           </FirstSection>
