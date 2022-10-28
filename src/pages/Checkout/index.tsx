@@ -18,7 +18,7 @@ import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 
 // Shared
-import { handleClick } from "shared/functions";
+import { handleClick } from "../../shared/functions";
 
 // Styles
 import {
@@ -73,12 +73,12 @@ export function Checkout() {
   // handleClick("/delivery");
 
 
-
+  // () => handleSubmit(onSubmit)
   // Render
   return (
     <CheckoutContainer>
       <FormContainer
-        onSubmit={() => handleSubmit(onSubmit)}
+        // onSubmit={handleSubmit(onSubmit)}
       >
         <FormInsideOrganizerWrapper>
           <FormTitle>Complete seu pedido</FormTitle>
@@ -210,6 +210,7 @@ export function Checkout() {
               backgroundColor="#DBAC2C"
               color="#FFFFFF"
               weight="700"
+              onClick={() => handleClick("/delivery")}
             >
               CONFIRMAR PEDIDO
             </Button>
