@@ -67,7 +67,7 @@ export function Checkout() {
   // Functions
   function onSubmit (data: IDeliveryFormData) {
     console.log(data);
-    reset();
+    // reset();
   }
 
   // handleClick("/delivery");
@@ -78,7 +78,7 @@ export function Checkout() {
   return (
     <CheckoutContainer>
       <FormContainer
-        // onSubmit={handleSubmit(onSubmit)}
+        onSubmit={() => handleSubmit(onSubmit)}
       >
         <FormInsideOrganizerWrapper>
           <FormTitle>Complete seu pedido</FormTitle>
