@@ -10,14 +10,15 @@ import * as zod from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 // Hooks
-import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate  } from "react-router-dom";
 
 // Components
 import { Bill } from "../../components/Bill";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
+
+// Shared
+import { handleClick } from "shared/functions";
 
 // Styles
 import {
@@ -48,8 +49,6 @@ type IDeliveryFormData = zod.infer<typeof FormValidationSchema>
 
 export function Checkout() {
   // Hooks
-  const navigate = useNavigate();
-
   const DeliveryForm = useForm<IDeliveryFormData>({
     resolver: zodResolver(FormValidationSchema),
     defaultValues: {
@@ -63,26 +62,23 @@ export function Checkout() {
     },
   })
 
-  const { register, handleSubmit, watch } = DeliveryForm;
-
-  // States
-  const [dataToSubmit, setDataToSubmit] = useState<IDeliveryFormData>();
+  const { register, handleSubmit, watch, reset } = DeliveryForm;
 
   // Functions
-  const handleSubmitForm = () => {
-    console.log(dataToSubmit);
+  function onSubmit (data: IDeliveryFormData) {
+    console.log(data);
+    reset();
   }
 
-  function handleClick(path: string) {
-    handleSubmitForm();
-    navigate(path);
-  }
+  // handleClick("/delivery");
+
+
 
   // Render
   return (
     <CheckoutContainer>
       <FormContainer
-        onSubmit={(data) => handleSubmit(setDataToSubmit(data))}
+        onSubmit={() => handleSubmit(onSubmit)}
       >
         <FormInsideOrganizerWrapper>
           <FormTitle>Complete seu pedido</FormTitle>
@@ -214,7 +210,6 @@ export function Checkout() {
               backgroundColor="#DBAC2C"
               color="#FFFFFF"
               weight="700"
-              onClick={() => handleClick("/delivery")}
             >
               CONFIRMAR PEDIDO
             </Button>
