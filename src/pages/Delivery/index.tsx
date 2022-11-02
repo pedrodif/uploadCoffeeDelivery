@@ -6,8 +6,10 @@ import {
 } from 'phosphor-react';
 
 // Components
-import DeliveryImage from '../../components/DeliveryImage';
 import { IconBackground } from '../../components/IconBackground';
+
+// Assets
+import deliveryImage from '../../assets/deliveryImg.png'
 
 // Styles
 import {
@@ -88,7 +90,7 @@ export function Delivery() {
       </div>
 
       <div>
-        <DeliveryImage />
+        <img src={deliveryImage} alt="delivery illustration image" />
       </div>
     </DeliveryContainer>
   )
