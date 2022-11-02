@@ -3,7 +3,9 @@ import {
   MapPin,
   ShoppingCart
 } from "phosphor-react";
-import { useNavigate  } from "react-router-dom";
+
+// Hooks
+import { useNavigate } from "react-router-dom";
 
 // Components
 import { Logo } from "../Logo";
@@ -33,20 +35,25 @@ export function Header() {
       </LogoBox>
 
       <HeaderNavBox>
-        <Button
-          type="button"
-          width="9.5rem"
-          height="2.375rem"
-          color="#4B2995"
-          fontSize="0.875rem"
-        >
-          <MapPin
-            color="#8047F8"
-            weight="fill"
-            size={23}
-          />
-          Porto Alegre, RS
-        </Button>
+        <div>
+          <div>
+            <Button
+              type="button"
+              width="9.5rem"
+              height="2.375rem"
+              color="#4B2995"
+              fontSize="0.875rem"
+              onClick={() => {}}
+            >
+              <MapPin
+                color="#8047F8"
+                weight="fill"
+                size={23}
+              />
+              Porto Alegre, RS
+            </Button>
+          </div>
+        </div>
 
         <Button
           type="button"
@@ -63,6 +70,5 @@ export function Header() {
         </Button>
       </HeaderNavBox>
     </HeaderContainer>
-
   )
 }
