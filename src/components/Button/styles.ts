@@ -20,6 +20,7 @@ export const ButtonContainer = styled.button<IButtonProps>`
   font-weight: ${(props) => props.weight ? props.weight : '400'};
   background-color: ${(props) => props.backgroundColor ? props.backgroundColor : '#EBE5F9'};
   color: ${(props) => props.color ? props.color : '#574F4D'};
+  transition: filter 300ms;
 
   &:hover {
     border: 0.063rem solid ${(props) => props.theme['purple']};
