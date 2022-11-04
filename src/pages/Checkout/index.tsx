@@ -10,7 +10,7 @@ import * as zod from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 // Hooks
-import { SubmitHandler, useForm } from "react-hook-form";
+import { SubmitHandler, useForm, Controller } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
 // Components
@@ -35,12 +35,12 @@ import {
 
 const FormValidationSchema = zod.object({
   zipCode: zod.string(),
-  // street: zod.string(),
-  // addressNumber: zod.string(),
-  // neighborhood: zod.string(),
-  // additionalInfo: zod.string(),
-  // city: zod.string(),
-  // FU: zod.string(),
+  street: zod.string(),
+  addressNumber: zod.string(),
+  neighborhood: zod.string(),
+  additionalInfo: zod.string(),
+  city: zod.string(),
+  FU: zod.string(),
 })
 
 type IDeliveryFormData = zod.infer<typeof FormValidationSchema>
@@ -53,17 +53,14 @@ export function Checkout() {
     resolver: zodResolver(FormValidationSchema),
   })
 
-  const { register, handleSubmit, watch, reset } = DeliveryForm;
+  const { handleSubmit, watch, reset, control } = DeliveryForm;
 
   // Functions
   const onSubmit: SubmitHandler<IDeliveryFormData> = (data) => {
     if (data) {
-      console.log(data)
+      console.log(data);
+      navigate("/delivery");
     }
-  }
-
-  function handleClick(path: string) {
-    navigate(path);
   }
 
   // Render
@@ -89,29 +86,33 @@ export function Checkout() {
 
             </SectionHeader>
 
-            <input
-              type="text"
-              id="zipCode"
-              placeholder="CEP"
-              width="12.5rem"
-              {...register('zipCode')}
+            <Controller
+              control={control}
+              name="zipCode"
+              render={({ field: { onChange } }) =>
+                <Input
+                  type="text"
+                  id="zipCode"
+                  placeholder="CEP"
+                  width="12.5rem"
+                  onChange={onChange}
+                />
+              }
             />
 
-            {/* <Input
-              type="text"
-              id="zipCode"
-              placeholder="CEP"
-              width="12.5rem"
-              {...register('zipCode')}
-            /> */}
-
-            {/* <Input
-              type="text"
-              id="street"
-              placeholder="Rua"
-              width="35rem"
-              {...register('street')}
-            /> */}
+            <Controller
+              control={control}
+              name="street"
+              render={({ field: { onChange } }) =>
+                <Input
+                type="text"
+                id="street"
+                placeholder="Rua"
+                width="35rem"
+                onChange={onChange}
+                />
+              }
+            />
 
             <Row>
               {/* <Input
@@ -203,18 +204,16 @@ export function Checkout() {
           <CheckoutPurchaseWrapper>
             <Bill />
             <pre>{JSON.stringify(watch(), null, 2)}</pre>
-            <button type="submit">Enviar</button>
-            {/* <Button
+            <Button
+              weight="700"
               type="submit"
               width="22rem"
               height="2.875rem"
-              backgroundColor="#DBAC2C"
               color="#FFFFFF"
-              weight="700"
-              // onClick={() => handleClick("/delivery")}
+              backgroundColor="#DBAC2C"
             >
               CONFIRMAR PEDIDO
-            </Button> */}
+            </Button>
           </CheckoutPurchaseWrapper>
         </div>
       </FormContainer>
