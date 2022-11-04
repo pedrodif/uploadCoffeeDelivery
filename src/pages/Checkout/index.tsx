@@ -53,7 +53,7 @@ export function Checkout() {
     resolver: zodResolver(FormValidationSchema),
   })
 
-  const { handleSubmit, watch, reset, control } = DeliveryForm;
+  const { handleSubmit, watch, control } = DeliveryForm;
 
   // Functions
   const onSubmit: SubmitHandler<IDeliveryFormData> = (data) => {
@@ -71,9 +71,9 @@ export function Checkout() {
       >
         <FormInsideOrganizerWrapper>
           <FormTitle>Complete seu pedido</FormTitle>
+
           <FirstSection>
             <SectionHeader>
-
               <MapPinLine
                 size={20}
                 color="#C47F17"
@@ -83,12 +83,12 @@ export function Checkout() {
                 <span>Endereço de Entrega</span>
                 <p>Informe o endereço onde deseja receber seu pedido</p>
               </HeaderText>
-
             </SectionHeader>
 
             <Controller
               control={control}
               name="zipCode"
+              rules={{ required: true }}
               render={({ field: { onChange }}) =>
                 <Input
                   type="text"
@@ -103,6 +103,7 @@ export function Checkout() {
             <Controller
               control={control}
               name="street"
+              rules={{ required: true }}
               render={({ field: { onChange }}) =>
                 <Input
                 type="text"
@@ -115,53 +116,86 @@ export function Checkout() {
             />
 
             <Row>
-              {/* <Input
-                type="text"
-                id="addressNumber"
-                placeholder="Número"
-                width="12.5rem"
-                {...register('addressNumber')}
-              /> */}
+              <Controller
+                control={control}
+                name="addressNumber"
+                rules={{ required: true }}
+                render={({ field: { onChange }}) =>
+                  <Input
+                    type="text"
+                    id="addressNumber"
+                    placeholder="Número"
+                    width="12.5rem"
+                    onChange={onChange}
+                  />
+                }
+             />
 
-              {/* <Input
-                type="text"
-                id="additionalInfo"
-                placeholder="Complemento"
-                width="21.75rem"
-                {...register('additionalInfo')}
-              /> */}
+              <Controller
+                control={control}
+                name="additionalInfo"
+                render={({ field: { onChange }}) =>
+                  <Input
+                    type="text"
+                    id="additionalInfo"
+                    placeholder="Complemento"
+                    width="21.75rem"
+                    onChange={onChange}
+                  />
+                }
+             />
             </Row>
 
             <Row>
-              {/* <Input
-                type="text"
-                id="neighborhood"
-                placeholder="Bairro"
-                width="12.5rem"
-                {...register('neighborhood')}
-              /> */}
+              <Controller
+                control={control}
+                name="neighborhood"
+                rules={{ required: true }}
+                render={({ field: { onChange }}) =>
+                  <Input
+                    type="text"
+                    id="neighborhood"
+                    placeholder="Bairro"
+                    width="12.5rem"
+                    onChange={onChange}
+                  />
+                }
+              />
 
-              {/* <Input
-                type="text"
-                id="city"
-                placeholder="Cidade"
-                width="17.25rem"
-                {...register('city')}
-              /> */}
+              <Controller
+                control={control}
+                name="city"
+                rules={{ required: true }}
+                render={({ field: { onChange }}) =>
+                  <Input
+                    type="text"
+                    id="city"
+                    placeholder="Cidade"
+                    width="17.25rem"
+                    onChange={onChange}
+                  />
+                }
+              />
 
-              {/* <Input
-                type="text"
-                id="FU"
-                placeholder="UF"
-                width="3.75rem"
-                {...register('FU')}
-              /> */}
+              <Controller
+                control={control}
+                name="FU"
+                rules={{ required: true }}
+                render={({ field: { onChange }}) =>
+                  <Input
+                    type="text"
+                    id="FU"
+                    placeholder="UF"
+                    width="3.75rem"
+                    onChange={onChange}
+                  />
+                }
+              />
             </Row>
           </FirstSection>
 
           <SecondSection>
             <SectionHeader>
-
               <CurrencyDollar
                 size={20}
                 color="#8047F8"
@@ -171,28 +205,39 @@ export function Checkout() {
                 <span>Pagamento</span>
                 <p>O pagamento é feito na entrega. Escolha a forma que deseja pagar</p>
               </HeaderText>
-
             </SectionHeader>
 
             <PaymentMethodWrapper>
               <Button
                 type="button"
               >
-                <CreditCard color="#8047F8" size={18}/>
+                <CreditCard
+                  color="#8047F8"
+                  size={18}
+                />
+
                 CARTÃO DE CRÉDITO
               </Button>
 
               <Button
                 type="button"
               >
-                <Bank color="#8047F8" size={18}/>
+                <Bank
+                  color="#8047F8"
+                  size={18}
+                />
+
                 CARTÃO DE DÉBITO
               </Button>
 
               <Button
                 type="button"
               >
-                <Money color="#8047F8" size={18}/>
+                <Money
+                  color="#8047F8"
+                  size={18}
+                />
+
                 DINHEIRO
               </Button>
             </PaymentMethodWrapper>
@@ -201,9 +246,12 @@ export function Checkout() {
 
         <div>
           <FormTitle>Cafés selecionados</FormTitle>
+
           <CheckoutPurchaseWrapper>
             <Bill />
+
             <pre>{JSON.stringify(watch(), null, 2)}</pre>
+
             <Button
               weight="700"
               type="submit"
