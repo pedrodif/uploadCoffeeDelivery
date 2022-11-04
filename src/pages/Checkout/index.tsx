@@ -10,15 +10,13 @@ import * as zod from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 // Hooks
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
 // Components
 import { Bill } from "../../components/Bill";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
-
-// Shared
 
 // Styles
 import {
@@ -36,13 +34,13 @@ import {
 } from "./styles";
 
 const FormValidationSchema = zod.object({
-  zipCode: zod.string().min(8, 'Informe o CEP'),
-  street: zod.string().min(1, 'Informe o nome da Rua'),
-  addressNumber: zod.string().min(1, 'Informe o número da residência de entrega'),
-  neighborhood: zod.string().min(1, 'Informe o Bairro de entrega'),
-  additionalInfo: zod.string(),
-  city: zod.string().min(1, 'Informe a Cidade de entrega'),
-  FU: zod.string().min(1, 'Informe a Unidade Federativa da Cidade informada'),
+  zipCode: zod.string(),
+  // street: zod.string(),
+  // addressNumber: zod.string(),
+  // neighborhood: zod.string(),
+  // additionalInfo: zod.string(),
+  // city: zod.string(),
+  // FU: zod.string(),
 })
 
 type IDeliveryFormData = zod.infer<typeof FormValidationSchema>
@@ -53,21 +51,15 @@ export function Checkout() {
 
   const DeliveryForm = useForm<IDeliveryFormData>({
     resolver: zodResolver(FormValidationSchema),
-    defaultValues: {
-      zipCode: '',
-      street: '',
-      addressNumber: '',
-      neighborhood: '',
-      additionalInfo: '',
-      city: '',
-      FU: '',
-    },
   })
 
   const { register, handleSubmit, watch, reset } = DeliveryForm;
 
   // Functions
-  function onSubmit (data: IDeliveryFormData) {
+  const onSubmit: SubmitHandler<IDeliveryFormData> = (data) => {
+    if (data) {
+      console.log(data)
+    }
   }
 
   function handleClick(path: string) {
@@ -78,7 +70,7 @@ export function Checkout() {
   return (
     <CheckoutContainer>
       <FormContainer
-        // onSubmit={() => handleSubmit(onSubmit)}
+        onSubmit={handleSubmit(onSubmit)}
       >
         <FormInsideOrganizerWrapper>
           <FormTitle>Complete seu pedido</FormTitle>
@@ -97,7 +89,7 @@ export function Checkout() {
 
             </SectionHeader>
 
-            <Input
+            <input
               type="text"
               id="zipCode"
               placeholder="CEP"
@@ -105,56 +97,64 @@ export function Checkout() {
               {...register('zipCode')}
             />
 
-            <Input
+            {/* <Input
+              type="text"
+              id="zipCode"
+              placeholder="CEP"
+              width="12.5rem"
+              {...register('zipCode')}
+            /> */}
+
+            {/* <Input
               type="text"
               id="street"
               placeholder="Rua"
               width="35rem"
               {...register('street')}
-            />
+            /> */}
 
             <Row>
-              <Input
+              {/* <Input
                 type="text"
                 id="addressNumber"
                 placeholder="Número"
                 width="12.5rem"
                 {...register('addressNumber')}
-              />
+              /> */}
 
-              <Input
+              {/* <Input
                 type="text"
                 id="additionalInfo"
                 placeholder="Complemento"
                 width="21.75rem"
                 {...register('additionalInfo')}
-              />
+              /> */}
             </Row>
 
             <Row>
-              <Input
+              {/* <Input
                 type="text"
                 id="neighborhood"
                 placeholder="Bairro"
                 width="12.5rem"
                 {...register('neighborhood')}
-              />
+              /> */}
 
-              <Input
+              {/* <Input
                 type="text"
                 id="city"
                 placeholder="Cidade"
                 width="17.25rem"
                 {...register('city')}
-              />
+              /> */}
 
-              <Input
+              {/* <Input
                 type="text"
                 id="FU"
                 placeholder="UF"
                 width="3.75rem"
                 {...register('FU')}
-              />
+              /> */}
             </Row>
           </FirstSection>
 
@@ -202,18 +202,19 @@ export function Checkout() {
           <FormTitle>Cafés selecionados</FormTitle>
           <CheckoutPurchaseWrapper>
             <Bill />
-
-            <Button
+            <pre>{JSON.stringify(watch(), null, 2)}</pre>
+            <button type="submit">Enviar</button>
+            {/* <Button
               type="submit"
               width="22rem"
               height="2.875rem"
               backgroundColor="#DBAC2C"
               color="#FFFFFF"
               weight="700"
-              onClick={() => handleClick("/delivery")}
+              // onClick={() => handleClick("/delivery")}
             >
               CONFIRMAR PEDIDO
-            </Button>
+            </Button> */}
           </CheckoutPurchaseWrapper>
         </div>
       </FormContainer>
