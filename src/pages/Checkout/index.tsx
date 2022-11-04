@@ -57,11 +57,12 @@ export function Checkout() {
   const { handleSubmit, watch, control } = DeliveryForm;
 
   // States
-  const [checkoutData, setCheckoutData] = useState({})
+  const [checkoutData, setCheckoutData] = useState<IDeliveryFormData>()
 
   // Functions
   const onSubmit: SubmitHandler<IDeliveryFormData> = (data) => {
     if (data) {
+      setCheckoutData(data);
       console.log(data);
       navigate("/delivery");
     }
