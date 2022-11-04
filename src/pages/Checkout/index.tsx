@@ -89,7 +89,7 @@ export function Checkout() {
             <Controller
               control={control}
               name="zipCode"
-              render={({ field: { onChange } }) =>
+              render={({ field: { onChange }}) =>
                 <Input
                   type="text"
                   id="zipCode"
@@ -103,7 +103,7 @@ export function Checkout() {
             <Controller
               control={control}
               name="street"
-              render={({ field: { onChange } }) =>
+              render={({ field: { onChange }}) =>
                 <Input
                 type="text"
                 id="street"
