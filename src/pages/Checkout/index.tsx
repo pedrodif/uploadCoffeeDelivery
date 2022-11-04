@@ -10,8 +10,9 @@ import * as zod from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 // Hooks
-import { SubmitHandler, useForm, Controller } from "react-hook-form";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { SubmitHandler, useForm, Controller } from "react-hook-form";
 
 // Components
 import { Bill } from "../../components/Bill";
@@ -54,6 +55,9 @@ export function Checkout() {
   })
 
   const { handleSubmit, watch, control } = DeliveryForm;
+
+  // States
+  const [checkoutData, setCheckoutData] = useState({})
 
   // Functions
   const onSubmit: SubmitHandler<IDeliveryFormData> = (data) => {
