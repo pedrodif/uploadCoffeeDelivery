@@ -20,6 +20,9 @@ import {
   HeaderContainer,
 } from "./styles";
 
+// Utils
+import { AvailableLocs } from "../../utils/options";
+
 export function Header() {
   const navigate = useNavigate();
 
@@ -55,7 +58,9 @@ export function Header() {
               />
               Porto Alegre, RS
             </Button> */}
-            <Select>
+            <Select
+              data={AvailableLocs}
+            >
               <MapPin
                 color="#8047F8"
                 weight="fill"

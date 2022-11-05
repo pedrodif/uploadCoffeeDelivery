@@ -231,7 +231,31 @@ export const BillItems =[
 
 export const AvailableLocs = [
   {
-    id: '',
-    value: '',
-  }
+    id: '1',
+    value: 'Porto Alegre, RS',
+  },
+  {
+    id: '2',
+    value: 'Caxias do Sul, RS',
+  },
+  {
+    id: '3',
+    value: 'Bento Gonçalves, RS',
+  },
+  {
+    id: '4',
+    value: 'Pelotas, RS',
+  },
+  {
+    id: '5',
+    value: 'Canela, RS',
+  },
+  {
+    id: '6',
+    value: 'Gramado, RS',
+  },
+  {
+    id: '7',
+    value: 'Rio Grande, RS',
+  },
 ]
