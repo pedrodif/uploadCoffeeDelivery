@@ -42,33 +42,18 @@ export function Header() {
       <HeaderNavBox>
         <div>
           <div>
-
-            {/* <Button
-              type="button"
-              width="9.5rem"
-              height="2.375rem"
-              color="#4B2995"
-              fontSize="0.875rem"
-              onClick={() => {}}
-            >
-              <MapPin
-                color="#8047F8"
-                weight="fill"
-                size={23}
+            <Select.Root>
+              <Select.Icon>
+                <MapPin
+                  color="#8047F8"
+                  weight="fill"
+                  size={23}
+                />
+              </Select.Icon>
+              <Select.Main
+                data={AvailableLocs}
               />
-              Porto Alegre, RS
-            </Button> */}
-
-            {/* <Select
-              data={AvailableLocs}
-              width="10rem"
-            >
-              <MapPin
-                color="#8047F8"
-                weight="fill"
-                size={23}
-              />
-            </Select> */}
+            </Select.Root>
           </div>
         </div>
 

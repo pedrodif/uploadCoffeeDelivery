@@ -7,7 +7,7 @@ import { SelectWrapper, SelectIconWrapper } from "./styles";
 export interface ISelectRootProps extends HTMLAttributes<HTMLDivElement> {
   width?: string;
   height?: string;
-  children?: ReactNode;
+  children: ReactNode;
   backgroundColor?: string;
 }
 
@@ -18,8 +18,6 @@ function SelectRoot({ children }: ISelectRootProps) {
     </SelectWrapper>
   )
 }
-
-SelectRoot.displayName = "Select.Root"
 
 interface ISelectIconContainerProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
@@ -33,15 +31,13 @@ function SelectIconContainer({ children }:ISelectIconContainerProps) {
   )
 }
 
-SelectIconContainer.displayName = 'SelectIcon.Container'
-
 interface IOptionProps {
   id: string;
   value: string;
 }
 
 interface ISelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
-  data?: IOptionProps[];
+  data: IOptionProps[];
 }
 
 function SelectContainer({ data }: ISelectProps) {
@@ -60,8 +56,6 @@ function SelectContainer({ data }: ISelectProps) {
     </select>
   )
 }
-
-SelectContainer.displayName = 'Select'
 
 export const Select = {
   Root: SelectRoot,
