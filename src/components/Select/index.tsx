@@ -4,13 +4,13 @@ interface IOptionProps {
 }
 
 interface ISelectProps {
-  data: IOptionProps[];
+  data?: IOptionProps[];
 }
 
 export function Select({ data }: ISelectProps) {
   return(
     <select>
-      {data.map(option => {
+      {data?.map(option => {
         return (
           <option
             key={option.id}
