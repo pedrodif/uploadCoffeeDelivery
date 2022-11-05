@@ -228,3 +228,10 @@ export const BillItems =[
     imgSource: images.HawainKona,
   },
 ]
+
+export const AvailableLocs = [
+  {
+    id: '',
+    value: '',
+  }
+]

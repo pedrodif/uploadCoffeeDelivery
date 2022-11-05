@@ -1,15 +1,25 @@
+// Packages
+import { ReactNode, SelectHTMLAttributes } from "react";
+
+// Styles
+import { SelectContainer } from "./styles";
+
 interface IOptionProps {
   id: string;
   value: string;
 }
 
-interface ISelectProps {
+export interface ISelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   data?: IOptionProps[];
+  children?: ReactNode;
 }
 
-export function Select({ data }: ISelectProps) {
+export function Select({ data, children, ...props }: ISelectProps) {
   return(
-    <select>
+    <SelectContainer
+      {...props}
+    >
+      {children}
       {data?.map(option => {
         return (
           <option
@@ -20,6 +30,6 @@ export function Select({ data }: ISelectProps) {
           </option>
         )
       })}
-    </select>
+    </SelectContainer>
   )
 }
