@@ -1,6 +1,3 @@
-// Packages
-import { HTMLAttributes, ReactNode, SelectHTMLAttributes } from "react";
-
 // Styles
 import { SelectWrapper, SelectIconWrapper, SelectMain } from "./styles";
 
