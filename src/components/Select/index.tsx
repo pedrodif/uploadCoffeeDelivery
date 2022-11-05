@@ -2,25 +2,20 @@
 import { HTMLAttributes, ReactNode, SelectHTMLAttributes } from "react";
 
 // Styles
-import { SelectWrapper, SelectIconWrapper } from "./styles";
+import { SelectWrapper, SelectIconWrapper, SelectMain } from "./styles";
 
-export interface ISelectRootProps extends HTMLAttributes<HTMLDivElement> {
-  width?: string;
-  height?: string;
-  children: ReactNode;
-  backgroundColor?: string;
-}
+// Types
+import { ISelectIconContainerProps, ISelectProps, ISelectRootProps } from "./types";
 
-function SelectRoot({ children }: ISelectRootProps) {
+
+function SelectRoot({ children, ...props }: ISelectRootProps) {
   return (
-    <SelectWrapper>
+    <SelectWrapper
+      {...props}
+    >
       {children}
     </SelectWrapper>
   )
-}
-
-interface ISelectIconContainerProps extends HTMLAttributes<HTMLDivElement> {
-  children: ReactNode;
 }
 
 function SelectIconContainer({ children }:ISelectIconContainerProps) {
@@ -31,18 +26,11 @@ function SelectIconContainer({ children }:ISelectIconContainerProps) {
   )
 }
 
-interface IOptionProps {
-  id: string;
-  value: string;
-}
-
-interface ISelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
-  data: IOptionProps[];
-}
-
-function SelectContainer({ data }: ISelectProps) {
+function SelectContainer({ data, ...props }: ISelectProps) {
   return(
-    <select>
+    <SelectMain
+      {...props}
+    >
       {data?.map(option => {
         return (
           <option
@@ -53,7 +41,7 @@ function SelectContainer({ data }: ISelectProps) {
           </option>
         )
       })}
-    </select>
+    </SelectMain>
   )
 }
 
