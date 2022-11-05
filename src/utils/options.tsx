@@ -240,7 +240,7 @@ export const AvailableLocs = [
   },
   {
     id: '3',
-    value: 'Bento Gonçalves, RS',
+    value: 'Santa Maria, RS',
   },
   {
     id: '4',
