@@ -4,7 +4,7 @@ import styled from 'styled-components';
 // Types
 import { ISelectRootProps } from '.';
 
-export const SelectContainer = styled.div<ISelectRootProps>`
+export const SelectWrapper = styled.div<ISelectRootProps>`
   box-sizing: border-box;
   cursor: pointer;
   border: none;
