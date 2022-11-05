@@ -19,7 +19,7 @@ export const LogoBox = styled.div`
 `
 
 export const HeaderNavBox = styled.div`
-  width: 13.5rem;
+  width: 15.5rem;
   display: flex;
   flex-direction: row;
   gap: 0.938rem;
