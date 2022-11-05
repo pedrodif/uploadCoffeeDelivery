@@ -2,9 +2,9 @@
 import styled from 'styled-components';
 
 // Types
-import { ISelectProps } from '.';
+import { ISelectRootProps } from '.';
 
-export const SelectContainer = styled.select<ISelectProps>`
+export const SelectContainer = styled.div<ISelectRootProps>`
   box-sizing: border-box;
   cursor: pointer;
   border: none;
@@ -21,7 +21,11 @@ export const SelectContainer = styled.select<ISelectProps>`
   color: ${(props) => props.color ? props.color : '#574F4D'};
   background-color: ${(props) => props.backgroundColor ? props.backgroundColor : '#EBE5F9'};
 
-  &:hover {
+  /* &:hover {
     background-color: ${(props) => props.theme['purple-light']};
-  }
+  } */
+`
+export const SelectIconWrapper = styled.div`
+  width: 1rem;
+  height: 1.25rem;
 `

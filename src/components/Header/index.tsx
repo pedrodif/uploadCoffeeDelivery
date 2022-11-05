@@ -58,7 +58,8 @@ export function Header() {
               />
               Porto Alegre, RS
             </Button> */}
-            <Select
+
+            {/* <Select
               data={AvailableLocs}
               width="10rem"
             >
@@ -67,7 +68,7 @@ export function Header() {
                 weight="fill"
                 size={23}
               />
-            </Select>
+            </Select> */}
           </div>
         </div>
 
