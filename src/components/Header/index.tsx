@@ -37,7 +37,8 @@ export function Header() {
       <HeaderNavBox>
         <div>
           <div>
-            <Button
+
+            {/* <Button
               type="button"
               width="9.5rem"
               height="2.375rem"
@@ -51,7 +52,7 @@ export function Header() {
                 size={23}
               />
               Porto Alegre, RS
-            </Button>
+            </Button> */}
           </div>
         </div>
 
