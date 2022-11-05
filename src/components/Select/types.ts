@@ -1,7 +1,6 @@
 import { HTMLAttributes, ReactNode, SelectHTMLAttributes } from "react";
 
 export interface ISelectRootProps extends HTMLAttributes<HTMLDivElement> {
-  width?: string;
   height?: string;
   children: ReactNode;
   backgroundColor?: string;
@@ -17,6 +16,7 @@ interface IOptionProps {
 }
 
 export interface ISelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
-  data: IOptionProps[];
+  data?: IOptionProps[];
   width?: string;
+  backgroundColor?: string;
 }
