@@ -55,7 +55,13 @@ export function Header() {
               />
               Porto Alegre, RS
             </Button> */}
-            <Select />
+            <Select>
+              <MapPin
+                color="#8047F8"
+                weight="fill"
+                size={23}
+              />
+            </Select>
           </div>
         </div>
 

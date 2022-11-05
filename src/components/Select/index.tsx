@@ -12,6 +12,9 @@ interface IOptionProps {
 export interface ISelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   data?: IOptionProps[];
   children?: ReactNode;
+  backgroundColor?: string;
+  width?: string;
+  height?: string;
 }
 
 export function Select({ data, children, ...props }: ISelectProps) {
