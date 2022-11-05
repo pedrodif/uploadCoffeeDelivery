@@ -60,6 +60,7 @@ export function Header() {
             </Button> */}
             <Select
               data={AvailableLocs}
+              width="10rem"
             >
               <MapPin
                 color="#8047F8"
