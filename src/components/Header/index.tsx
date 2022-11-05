@@ -9,7 +9,9 @@ import { useNavigate } from "react-router-dom";
 
 // Components
 import { Logo } from "../Logo";
+import { Select } from "../Select";
 import { Button } from "../Button";
+
 
 // Styles
 import {
@@ -53,6 +55,7 @@ export function Header() {
               />
               Porto Alegre, RS
             </Button> */}
+            <Select />
           </div>
         </div>
 
