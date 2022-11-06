@@ -36,4 +36,6 @@ export const SelectMain = styled.select<ISelectProps>`
   font-size: 0.875rem;
   color: ${(props) => props.color ? props.color : '#4B2995'};
   background-color: ${(props) => props.backgroundColor ? props.backgroundColor : '#EBE5F9'};
+
+
 `
