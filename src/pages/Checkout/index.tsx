@@ -33,6 +33,7 @@ import {
   CheckoutPurchaseWrapper,
   FormInsideOrganizerWrapper
 } from "./styles";
+import { RadioButton } from "../../components/RadioButton";
 
 const FormValidationSchema = zod.object({
   zipCode: zod.string(),
@@ -213,7 +214,7 @@ export function Checkout() {
             </SectionHeader>
 
             <PaymentMethodWrapper>
-              <Button
+              {/* <Button
                 type="button"
               >
                 <CreditCard
@@ -244,7 +245,8 @@ export function Checkout() {
                 />
 
                 DINHEIRO
-              </Button>
+              </Button> */}
+              <RadioButton />
             </PaymentMethodWrapper>
           </SecondSection>
         </FormInsideOrganizerWrapper>
