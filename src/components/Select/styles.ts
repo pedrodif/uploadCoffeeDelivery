@@ -8,7 +8,7 @@ export const SelectWrapper = styled.div<ISelectRootProps>`
   box-sizing: border-box;
   cursor: pointer;
   display: flex;
-  gap: 0.5rem;
+  gap: 0.3rem;
   align-items: center;
   justify-content: center;
   border-radius: 0.375rem;
@@ -37,7 +37,6 @@ export const SelectMain = styled.select<ISelectProps>`
   color: ${(props) => props.color ? props.color : '#4B2995'};
   background-color: ${(props) => props.backgroundColor ? props.backgroundColor : '#EBE5F9'};
   padding-left: 0.313rem;
-  line-height: 3rem;
 
 
 `
