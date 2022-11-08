@@ -4,6 +4,8 @@ import { HTMLAttributes, ReactNode } from "react"
 // Styles
 import { RadioButtonWrapper } from "./styles";
 
+import * as RadioGroup from '@radix-ui/react-radio-group';
+
 interface IRadioRoot extends HTMLAttributes<HTMLDivElement> {
   children?: ReactNode;
 }
@@ -21,14 +23,11 @@ function RadioRoot ({ children, ...props }: IRadioRoot ) {
 
 export function RadioButton () {
   return (
-    <RadioButtonWrapper>
-      <label htmlFor="radio">
-        Teste
-      <input type="radio" id="radio" name="radio" value="Teste" />
-      </label>
-      <section>
-        <span></span>
-      </section>
-    </RadioButtonWrapper>
+    <RadioGroup.Root defaultValue="default">
+      <RadioGroup.Item value="Cartão Crédito" id="credicard">
+        <RadioGroup.Indicator />
+      </RadioGroup.Item>
+      <label htmlFor="credicard">Default</label>
+    </RadioGroup.Root>
   )
 }
