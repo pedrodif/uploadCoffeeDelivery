@@ -2,27 +2,30 @@
 import { HTMLAttributes, ReactNode } from "react"
 
 // Styles
-import { RadioButtonWrapper } from "./styles";
-
-import { Check } from "phosphor-react";
+import { RadioInput, RadioLabel, sectionContainer } from "./styles";
 
 
-interface IRadioRoot extends HTMLAttributes<HTMLDivElement> {
+interface IRadioRoot extends HTMLAttributes<HTMLElement> {
   children?: ReactNode;
 }
 
-function RadioRoot ({ children, ...props }: IRadioRoot ) {
+function RadioRoot({ children, ...props }: IRadioRoot) {
   return (
-    <div
+    <sectionContainer
       {...props}
     >
       {children}
-    </div>
+    </sectionContainer>
   )
 }
 
 
-export function RadioButton ({ ...props }: IRadioGroupProps) {
+export function RadioGroup() {
+  return(
+    <>
+      <RadioInput type="radio" id="radio" value="Opção 1" />
+      <RadioLabel htmlFor="radio">Opção 1</RadioLabel>
+    </>
 
-
+  )
 }
