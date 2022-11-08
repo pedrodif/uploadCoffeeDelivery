@@ -4,7 +4,8 @@ import { HTMLAttributes, ReactNode } from "react"
 // Styles
 import { RadioButtonWrapper } from "./styles";
 
-import * as RadioGroup from '@radix-ui/react-radio-group';
+import { Check } from "phosphor-react";
+
 
 interface IRadioRoot extends HTMLAttributes<HTMLDivElement> {
   children?: ReactNode;
@@ -21,13 +22,7 @@ function RadioRoot ({ children, ...props }: IRadioRoot ) {
 }
 
 
-export function RadioButton () {
-  return (
-    <RadioGroup.Root defaultValue="default">
-      <RadioGroup.Item value="Cartão Crédito" id="credicard">
-        <RadioGroup.Indicator />
-      </RadioGroup.Item>
-      <label htmlFor="credicard">Default</label>
-    </RadioGroup.Root>
-  )
+export function RadioButton ({ ...props }: IRadioGroupProps) {
+
+
 }
