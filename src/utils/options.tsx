@@ -1,7 +1,7 @@
 // Assets
 import { images } from "../assets";
 
-// Mocks
+// Mocks - Cards
 export const coffeeOptionsList = [
   {
     id: '1',
@@ -202,6 +202,7 @@ export const coffeeOptionsList = [
   },
 ]
 
+// Mock checkout
 export const BillItems =[
   {
     id: '1',
@@ -229,6 +230,7 @@ export const BillItems =[
   },
 ]
 
+// Mock Select
 export const AvailableLocs = [
   {
     id: '1',
@@ -258,4 +260,24 @@ export const AvailableLocs = [
     id: '7',
     value: 'Rio Grande, RS',
   },
+]
+
+// Mock Radio Group
+export const RadioGroupOptions = [
+  {
+    id: '1',
+    value: 'cartão de crédito',
+    name: 'payment'
+  },
+  {
+    id: '2',
+    value: 'cartão de débito',
+    name: 'payment'
+  },
+  {
+    id: '3',
+    value: "dinheiro",
+    name: 'payment'
+  },
+
 ]

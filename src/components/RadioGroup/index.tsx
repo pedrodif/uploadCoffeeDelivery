@@ -1,41 +1,40 @@
 // Packages
-import { HTMLAttributes, LabelHTMLAttributes, ReactNode } from "react"
+import { HTMLAttributes, ReactNode } from "react"
 
 // Styles
 import { RadioInput, RadioLabel, SectionContainer } from "./styles";
 
+interface IdataProps {
+  id: string;
+  value: string;
+  name: string;
+}
 
-interface IRadioRoot extends HTMLAttributes<HTMLElement> {
+interface IRadioGroupProps  extends HTMLAttributes<HTMLElement> {
   children?: ReactNode;
+  data: IdataProps[];
 }
 
-function RadioRoot({ children, ...props }: IRadioRoot) {
+export function RadioGroup({ data }: IRadioGroupProps) {
   return (
-    <SectionContainer
-
-      {...props}
-    >
-      {children}
-    </SectionContainer>
-  )
-}
-
-export interface IRadioGroup extends LabelHTMLAttributes<HTMLLabelElement> {
-  content?: string;
-}
-
-function RadioGroup (props: IRadioGroup) {
-  return(
     <>
-      <RadioInput type="radio" id="radio" value="Opção 1" name="radioGroup"/>
-      <RadioLabel htmlFor="radio" {...props}></RadioLabel>
+      {data?.map(datum => {
+        return(
+          <SectionContainer>
+            <RadioInput
+              type="radio"
+              id={datum.id}
+              name={datum.name}
+              value={datum.value}
+            />
+            <RadioLabel
+              htmlFor={datum.id}
+            >
+              {datum.value}
+            </RadioLabel>
+          </SectionContainer>
+        )
+      })}
     </>
-
   )
 }
-
-export const Radio = {
-  Root: RadioRoot,
-  Group: RadioGroup,
-}
-

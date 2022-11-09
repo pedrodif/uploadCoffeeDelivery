@@ -18,7 +18,7 @@ import { SubmitHandler, useForm, Controller } from "react-hook-form";
 import { Bill } from "../../components/Bill";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
-import { Radio } from "../../components/RadioGroup";
+import { RadioGroup } from "../../components/RadioGroup";
 
 
 // Styles
@@ -35,6 +35,9 @@ import {
   CheckoutPurchaseWrapper,
   FormInsideOrganizerWrapper
 } from "./styles";
+
+// Utils
+import { RadioGroupOptions } from "../../utils/options";
 
 const FormValidationSchema = zod.object({
   zipCode: zod.string(),
@@ -247,11 +250,9 @@ export function Checkout() {
 
                 DINHEIRO
               </Button> */}
-              <Radio.Root>
-                <Radio.Group
-                  content="teste"
-                />
-              </Radio.Root>
+              <RadioGroup
+                data={RadioGroupOptions}
+              />
             </PaymentMethodWrapper>
           </SecondSection>
         </FormInsideOrganizerWrapper>

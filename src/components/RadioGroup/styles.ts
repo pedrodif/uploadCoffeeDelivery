@@ -1,14 +1,12 @@
 // Packages
 import styled from 'styled-components';
 
-// Types
-import { IRadioGroup } from '.';
 
 export const RadioInput = styled.input`
-  display: none;
+  /* display: none; */
 `
 
-export const RadioLabel = styled.label<IRadioGroup>`
+export const RadioLabel = styled.label`
   display: flex;
   align-items: center;
   font-size: 12px;
@@ -16,7 +14,7 @@ export const RadioLabel = styled.label<IRadioGroup>`
   cursor: pointer;
   text-transform: uppercase;
 
-  &::before {
+  /* &::before {
     content: '';
     display: flex;
     justify-content: center;
@@ -28,12 +26,12 @@ export const RadioLabel = styled.label<IRadioGroup>`
     margin-right: 10px;
     transition: 0.2s ease-in-out;
     background-color: transparent;
-    /* overflow: hidden; */
-  }
+    overflow: hidden;
+  } */
 
-  #radio:checked + &::before {
+  /* #radio:checked + &::before {
     border: 2px solid pink;
-  }
+  } */
 `
 
 export const SectionContainer = styled.section`
@@ -51,5 +49,4 @@ export const SectionContainer = styled.section`
   color: ${(props) => props.theme['base-text']};
   background-color: ${(props) => props.theme['purple-light']};
   overflow: hidden;
-
 `
