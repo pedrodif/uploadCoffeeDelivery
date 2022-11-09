@@ -6,7 +6,7 @@ import { IRadioGroupProps } from '.';
 
 
 export const RadioInput = styled.input`
-  /* display: none; */
+  display: none;
 `
 
 export const RadioLabel = styled.label`
@@ -42,7 +42,7 @@ export const SectionContainer = styled.section<IRadioGroupProps>`
   width: 11.167rem;
   height: 3.188rem;
   padding: 0;
-  border: ${(props) => props.hasBorder ? '0.063rem solid #8047F8' : 'none'};
+  border: 0.063rem solid #8047F8;
   border-radius: 0.375rem;
   display: flex;
   align-items: center;

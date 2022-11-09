@@ -13,10 +13,9 @@ interface IdataProps {
 export interface IRadioGroupProps extends HTMLAttributes<HTMLElement> {
   data?: IdataProps[];
   children?: ReactNode;
-  hasBorder?: boolean;
 }
 
-export function RadioGroup({ data, hasBorder,...props }: IRadioGroupProps) {
+export function RadioGroup({ data,...props }: IRadioGroupProps) {
   return (
     <>
       {data?.map(datum => {
