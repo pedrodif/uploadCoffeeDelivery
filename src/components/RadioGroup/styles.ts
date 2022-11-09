@@ -1,6 +1,9 @@
 // Packages
 import styled from 'styled-components';
 
+// Types
+import { IRadioGroupProps } from '.';
+
 
 export const RadioInput = styled.input`
   /* display: none; */
@@ -34,12 +37,12 @@ export const RadioLabel = styled.label`
   } */
 `
 
-export const SectionContainer = styled.section`
+export const SectionContainer = styled.section<IRadioGroupProps>`
   box-sizing: border-box;
   width: 11.167rem;
   height: 3.188rem;
   padding: 0;
-  border: none;
+  border: ${(props) => props.hasBorder ? '0.063rem solid #8047F8' : 'none'};
   border-radius: 0.375rem;
   display: flex;
   align-items: center;
@@ -50,3 +53,4 @@ export const SectionContainer = styled.section`
   background-color: ${(props) => props.theme['purple-light']};
   overflow: hidden;
 `
+
