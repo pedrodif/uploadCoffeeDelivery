@@ -10,9 +10,9 @@ interface IdataProps {
   name: string;
 }
 
-interface IRadioGroupProps  extends HTMLAttributes<HTMLElement> {
-  children?: ReactNode;
+interface IRadioGroupProps extends HTMLAttributes<HTMLElement> {
   data: IdataProps[];
+  children?: ReactNode;
 }
 
 export function RadioGroup({ data }: IRadioGroupProps) {
@@ -20,12 +20,15 @@ export function RadioGroup({ data }: IRadioGroupProps) {
     <>
       {data?.map(datum => {
         return(
-          <SectionContainer>
+          <SectionContainer
+            key={datum.id}
+          >
             <RadioInput
               type="radio"
               id={datum.id}
               name={datum.name}
               value={datum.value}
+              onClick={() => console.log(datum.value)}
             />
             <RadioLabel
               htmlFor={datum.id}

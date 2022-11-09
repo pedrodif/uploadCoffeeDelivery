@@ -47,6 +47,7 @@ const FormValidationSchema = zod.object({
   additionalInfo: zod.string(),
   city: zod.string(),
   FU: zod.string(),
+  payment: zod.string(),
 })
 
 type IDeliveryFormData = zod.infer<typeof FormValidationSchema>
@@ -67,9 +68,9 @@ export function Checkout() {
   // Functions
   const onSubmit: SubmitHandler<IDeliveryFormData> = (data) => {
     if (data) {
-      setCheckoutData(data);
+      // setCheckoutData(data);
       console.log(data);
-      navigate("/delivery");
+      // navigate("/delivery");
     }
   }
 
@@ -250,9 +251,19 @@ export function Checkout() {
 
                 DINHEIRO
               </Button> */}
-              <RadioGroup
-                data={RadioGroupOptions}
+
+              <Controller
+                control={control}
+                name="payment"
+                rules={{ required: true }}
+                render={({ field: { onChange }}) =>
+                  <RadioGroup
+                    data={RadioGroupOptions}
+                    onChange={onChange}
+                  />
+                }
               />
+
             </PaymentMethodWrapper>
           </SecondSection>
         </FormInsideOrganizerWrapper>
