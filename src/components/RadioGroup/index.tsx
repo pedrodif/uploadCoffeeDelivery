@@ -7,6 +7,10 @@ import { Bank, CreditCard, Money } from "phosphor-react";
 // Styles
 import { RadioInput, RadioLabel, SectionContainer } from "./styles";
 
+// Types
+import { IIconWrapperProps, IRadioGroupProps } from "./types";
+
+// Functions
 const handleIcon = (icon: string) => {
   if (icon === "money") {
     return (
@@ -34,10 +38,7 @@ const handleIcon = (icon: string) => {
   )
 }
 
-interface IIconWrapperProps extends HTMLAttributes<HTMLDivElement> {
-  children?: ReactNode;
-}
-
+// Components
 function IconWrapper({ children }: IIconWrapperProps) {
   return (
     <div>
@@ -46,18 +47,8 @@ function IconWrapper({ children }: IIconWrapperProps) {
   )
 }
 
-interface IdataProps {
-  id: string;
-  value: string;
-  name: string;
-  icon: string;
-}
-
-export interface IRadioGroupProps extends HTMLAttributes<HTMLElement> {
-  data?: IdataProps[];
-}
-
 export function RadioGroup({ data, ...props }: IRadioGroupProps) {
+  // Render
   return (
     <>
       {data?.map(datum => {
