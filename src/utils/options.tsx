@@ -267,17 +267,20 @@ export const RadioGroupOptions = [
   {
     id: '1',
     value: 'cartão de crédito',
-    name: 'payment'
+    icon: 'creditCard',
+    name: 'payment',
   },
   {
     id: '2',
     value: 'cartão de débito',
-    name: 'payment'
+    icon: 'bank',
+    name: 'payment',
   },
   {
     id: '3',
     value: "dinheiro",
-    name: 'payment'
+    icon: 'money',
+    name: 'payment',
   },
 
 ]

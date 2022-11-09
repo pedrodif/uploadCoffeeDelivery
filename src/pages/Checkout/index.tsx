@@ -74,6 +74,18 @@ export function Checkout() {
     }
   }
 
+  const handleIcon = (icon: string) => {
+    if (icon === "money") {
+      return <Money color="#8047F8" size={18}/>
+    }
+
+    if (icon === "creditCard") {
+      return  <CreditCard color="#8047F8" size={18} />
+    }
+
+    return <Bank color="#8047F8" size={18} />
+  }
+
   // Render
   return (
     <CheckoutContainer>
@@ -260,6 +272,7 @@ export function Checkout() {
                   <RadioGroup
                     data={RadioGroupOptions}
                     onChange={onChange}
+                    icon={() => handleIcon}
                   />
                 }
               />
