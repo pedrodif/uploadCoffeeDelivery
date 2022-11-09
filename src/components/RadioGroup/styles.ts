@@ -51,6 +51,5 @@ export const SectionContainer = styled.section<IRadioGroupProps>`
   cursor: pointer;
   color: ${(props) => props.theme['base-text']};
   background-color: ${(props) => props.theme['purple-light']};
-  overflow: hidden;
 `
 
