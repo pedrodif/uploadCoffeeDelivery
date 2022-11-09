@@ -1,8 +1,5 @@
 // Packages
 import {
-  Bank,
-  Money,
-  CreditCard,
   MapPinLine,
   CurrencyDollar
 } from "phosphor-react";
@@ -74,17 +71,7 @@ export function Checkout() {
     }
   }
 
-  const handleIcon = (icon: string) => {
-    if (icon === "money") {
-      return <Money color="#8047F8" size={18}/>
-    }
 
-    if (icon === "creditCard") {
-      return  <CreditCard color="#8047F8" size={18} />
-    }
-
-    return <Bank color="#8047F8" size={18} />
-  }
 
   // Render
   return (
@@ -231,39 +218,6 @@ export function Checkout() {
             </SectionHeader>
 
             <PaymentMethodWrapper>
-              {/* <Button
-                type="button"
-              >
-                <CreditCard
-                  color="#8047F8"
-                  size={18}
-                />
-
-                CARTÃO DE CRÉDITO
-              </Button>
-
-              <Button
-                type="button"
-              >
-                <Bank
-                  color="#8047F8"
-                  size={18}
-                />
-
-                CARTÃO DE DÉBITO
-              </Button>
-
-              <Button
-                type="button"
-              >
-                <Money
-                  color="#8047F8"
-                  size={18}
-                />
-
-                DINHEIRO
-              </Button> */}
-
               <Controller
                 control={control}
                 name="payment"
@@ -272,11 +226,9 @@ export function Checkout() {
                   <RadioGroup
                     data={RadioGroupOptions}
                     onChange={onChange}
-                    icon={() => handleIcon}
                   />
                 }
               />
-
             </PaymentMethodWrapper>
           </SecondSection>
         </FormInsideOrganizerWrapper>
