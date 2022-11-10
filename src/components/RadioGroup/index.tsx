@@ -32,7 +32,7 @@ const handleIcon = (icon: string) => {
 
   return (
     <Bank
-      color="#8047F8"
+      color="#8047F7"
       size={18}
     />
   )
