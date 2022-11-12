@@ -67,11 +67,9 @@ export function Checkout() {
     if (data) {
       // setCheckoutData(data);
       console.log(data);
-      // navigate("/delivery");
+      navigate("/delivery");
     }
   }
-
-
 
   // Render
   return (
