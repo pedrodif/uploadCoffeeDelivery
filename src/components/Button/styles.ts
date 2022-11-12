@@ -18,8 +18,8 @@ export const ButtonContainer = styled.button<IButtonProps>`
   height: ${(props) => props.height ? props.height : '3.188rem'};
   font-size: ${(props) => props.fontSize? props.fontSize : '0.75rem'};
   font-weight: ${(props) => props.weight ? props.weight : '400'};
-  background-color: ${(props) => props.backgroundColor ? props.backgroundColor : '#EBE5F9'};
   color: ${(props) => props.color ? props.color : '#574F4D'};
+  background-color: ${(props) => props.backgroundColor ? props.backgroundColor : '#EBE5F9'};
 
   &:hover {
     border: 0.063rem solid ${(props) => props.theme['purple']};
