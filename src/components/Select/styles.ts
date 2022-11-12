@@ -30,13 +30,11 @@ export const SelectIconWrapper = styled.div`
 
 export const SelectMain = styled.select<ISelectProps>`
   box-sizing: border-box;
-  width: ${(props) => props.width ? props.width : '8.938rem'};
-  height: 1.25rem;
   border: none;
   font-size: 0.875rem;
-  color: ${(props) => props.color ? props.color : '#4B2995'};
-  background-color: ${(props) => props.backgroundColor ? props.backgroundColor : '#EBE5F9'};
   padding-left: 0.313rem;
-
-
+  height: 1.25rem;
+  color: ${(props) => props.color ? props.color : '#4B2995'};
+  width: ${(props) => props.width ? props.width : '8.938rem'};
+  background-color: ${(props) => props.backgroundColor ? props.backgroundColor : '#EBE5F9'};
 `
