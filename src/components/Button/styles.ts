@@ -7,6 +7,7 @@ import { IButtonProps } from '.'
 export const ButtonContainer = styled.button<IButtonProps>`
   box-sizing: border-box;
   border: none;
+  cursor: pointer;
   display: flex;
   gap: 0.5rem;
   align-items: center;
