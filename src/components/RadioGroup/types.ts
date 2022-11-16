@@ -5,7 +5,7 @@ export interface IIconWrapperProps extends HTMLAttributes<HTMLDivElement> {
   children?: ReactNode;
 }
 
-interface IdataProps {
+interface IDataProps {
   id: string;
   value: string;
   name: string;
@@ -13,5 +13,5 @@ interface IdataProps {
 }
 
 export interface IRadioGroupProps extends HTMLAttributes<HTMLElement> {
-  data?: IdataProps[];
+  data?: IDataProps[];
 }
