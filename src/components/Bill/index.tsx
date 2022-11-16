@@ -68,7 +68,12 @@ function CoffeeSelected({ title, value, imgSource }: ICoffeeSelected) {
       </FormInsideOrganizerWrapper>
 
       <BillWrapper>
-        R$ {value}
+        R$
+        <UiNumber
+          format="0.00"
+        >
+          {value}
+        </UiNumber>
       </BillWrapper>
     </CoffeeSelectedCard>
   )
