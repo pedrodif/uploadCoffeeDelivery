@@ -7,6 +7,7 @@ import {
 
 // Components
 import { Button } from "../Button";
+import { UiNumber } from "../UiNumber";
 
 // Styles
 import {
@@ -25,7 +26,6 @@ import {
 
 // Utils
 import { BillItems } from "../../utils/options";
-import { UiNumber } from "../UiNumber";
 
 interface ICoffeeSelected {
   id?: string;
