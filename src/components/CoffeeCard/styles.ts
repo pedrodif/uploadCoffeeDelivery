@@ -100,11 +100,9 @@ export const CardBillWrapper = styled.p`
   gap: 0.125rem;
   font-size: 1rem;
   color:${(props) => props.theme['base-text']};
+
+  span {
+    font-size: 1.563rem;
+    font-family: 'Baloo 2';
+  }
 `
-
-export const CardBillValue = styled.span`
-  font-size: 1.563rem;
-  font-family: 'Baloo 2';
-`
-
-

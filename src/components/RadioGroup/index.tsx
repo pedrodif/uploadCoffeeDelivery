@@ -48,14 +48,35 @@ function IconWrapper({ children }: IIconWrapperProps) {
 }
 
 export function RadioGroup({ data, ...props }: IRadioGroupProps) {
+  // States
+  const [ idToSearch, setidToSearch] = useState<string>()
+  const [ isBorderShown, setIsBorderShown] = useState<boolean>(false)
+
+  if (idToSearch) {
+    const sectionWrapper = document.getElementById(idToSearch);
+    if (isBorderShown && sectionWrapper) {
+      sectionWrapper.style.borderStyle = 'solid';
+      sectionWrapper.style.borderWidth = '1px';
+      sectionWrapper.style.borderColor  = '#8047F8';
+    }
+  }
+
+  // Functions
+  function hanldeClick(id: string) {
+    setIsBorderShown(true);
+    setidToSearch(id);
+  }
+
   // Render
   return (
     <>
       {data?.map(datum => {
         return(
           <SectionContainer
-            key={datum.id}
             {...props}
+            // id={datum.id}
+            key={datum.id}
+            // onClick={() => hanldeClick(datum.id)}
           >
             <IconWrapper>
               {handleIcon(datum.icon)}

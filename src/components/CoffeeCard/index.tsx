@@ -10,7 +10,6 @@ import {
   CardTitle,
   Ingredients,
   CardContainer,
-  CardBillValue,
   CardBillWrapper,
   CardImageWrapper,
   CardAmountWrapper,
@@ -21,6 +20,7 @@ import {
 
 // Components
 import { Button } from "../Button";
+import { UiNumber } from "../UiNumber";
 
 export interface ICoffeeCardProps {
   id?: string;
@@ -92,9 +92,11 @@ export function CoffeeCard({ imgSource, ingredients, title, description, value }
       <CardShoppingWrapper>
         <CardBillWrapper>
           R$
-          <CardBillValue>
+          <UiNumber
+            format="0.00"
+          >
             {value}
-          </CardBillValue>
+          </UiNumber>
         </CardBillWrapper>
 
         <CardAmountWrapper>
