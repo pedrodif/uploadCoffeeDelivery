@@ -92,6 +92,7 @@ export function Bill() {
       <PurchaseInformation>
         <BillInformationWrapper>
           <p>Total de itens</p>
+
           <ValueWrapper>
             <p>R$</p>
             <UiNumber
@@ -104,12 +105,28 @@ export function Bill() {
 
         <BillInformationWrapper>
           <p>Entrega</p>
-          <p>R$ 3,50</p>
+
+          <ValueWrapper>
+            <p>R$</p>
+            <UiNumber
+              format="0.00"
+            >
+              3.50
+            </UiNumber>
+          </ValueWrapper>
         </BillInformationWrapper>
 
         <FinalAmount>
           <p>Total</p>
-          <p>R$ 33,20</p>
+
+          <ValueWrapper>
+            <p>R$</p>
+            <UiNumber
+              format="0.00"
+            >
+              33.20
+            </UiNumber>
+          </ValueWrapper>
         </FinalAmount>
       </PurchaseInformation>
     </>
