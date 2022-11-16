@@ -19,11 +19,13 @@ import {
   CoffeeSelectedCard,
   PurchaseInformation,
   BillInformationWrapper,
-  FormInsideOrganizerWrapper
+  FormInsideOrganizerWrapper,
+  ValueWrapper
 } from "./styles";
 
 // Utils
 import { BillItems } from "../../utils/options";
+import { UiNumber } from "../UiNumber";
 
 interface ICoffeeSelected {
   id?: string;
@@ -90,7 +92,14 @@ export function Bill() {
       <PurchaseInformation>
         <BillInformationWrapper>
           <p>Total de itens</p>
-          <p>R$ 29,70</p>
+          <ValueWrapper>
+            <p>R$</p>
+            <UiNumber
+              format="0.00"
+            >
+              29.70
+            </UiNumber>
+          </ValueWrapper>
         </BillInformationWrapper>
 
         <BillInformationWrapper>

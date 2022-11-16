@@ -8,7 +8,7 @@ interface IUiNumber extends HTMLAttributes<HTMLSpanElement> {
   children: ReactNode;
 }
 
-export function UiNumber({ format, children }:IUiNumber) {
+export function UiNumber({ format, children }: IUiNumber) {
   return(
     <span>
       {numeral(children).format(format)}

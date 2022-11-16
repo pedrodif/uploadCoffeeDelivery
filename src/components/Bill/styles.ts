@@ -38,6 +38,11 @@ export const Row = styled.div`
   gap: 0.8rem;
 `
 
+export const ValueWrapper = styled.section`
+  display: flex;
+  gap: 0.3rem;
+`
+
 export const AmountWrapper = styled.div`
   width: 4.5rem;
   height: 2rem;
@@ -76,3 +81,4 @@ export const FinalAmount = styled(BillInformationWrapper)`
   color: ${(props) => props.theme['base-subtitle']};
   font-size: 1.25rem;
 `
+
