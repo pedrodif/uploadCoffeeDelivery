@@ -61,7 +61,7 @@ function CoffeeSelected({ title, value, imgSource }: ICoffeeSelected) {
               color="#8047F8"
               size={15}
             />
-            REMOVE
+            REMOVER
           </Button>
         </Row>
 
