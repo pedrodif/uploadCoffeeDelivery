@@ -63,7 +63,7 @@ export function CoffeeCard({ imgSource, ingredients, title, description, value }
    if (typeof ingredients === "string") {
       return (
         <IngridientsRenderBase
-          value={ingredient as string}
+          value={ingredients as string}
         />
       )
     }
