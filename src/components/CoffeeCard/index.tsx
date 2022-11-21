@@ -43,7 +43,7 @@ export function CoffeeCard({ imgSource, ingredients, title, description, value }
   function IngridientsRenderBase({ value }: IIngridientsBaseComponent) {
     return(
       <Ingredients>
-        {value}
+        {vale}
       </Ingredients>
     )
   }
