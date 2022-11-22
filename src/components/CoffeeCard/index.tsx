@@ -53,7 +53,7 @@ export function CoffeeCard({ imgSource, ingredients, title, description, value }
 	ingredients?.map((ingredient) => {
     return (
       <IngridientsRenderBase
-        key={ingredient.id}
+        key={ingredient.i}
         value={ingredient.value as unknown as string}
       />
     )
