@@ -78,7 +78,7 @@ export function CoffeeCard({ imgSource, ingredients, title, description, value }
       </CardImageWrapper>
 
       <CardIngredientsWrapper>
-        {handleIngredients(ingredient)}
+        {handleIngredients(ingredients)}
       </CardIngredientsWrapper>
 
       <CardTitle>
