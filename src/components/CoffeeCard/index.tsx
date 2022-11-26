@@ -93,7 +93,7 @@ export function CoffeeCard({ imgSource, ingredients, title, description, value }
         <CardBillWrapper>
           R$
           <UiNumber
-            format="0.0"
+            format="0.00"
           >
             {value}
           </UiNumber>
